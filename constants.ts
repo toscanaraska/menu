@@ -16,11 +16,15 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cat_palacinke_slane', name: { sr: 'Slane Palačinke & Panuozzo', en: 'Savory Crepes & Panuozzo' }, type: CategoryType.FOOD, order: 3, imageUrl: "assets/cat_savory_crepes.png" },
     { id: 'cat_burrito', name: { sr: 'Burrito', en: 'Burrito' }, type: CategoryType.FOOD, order: 4, imageUrl: "assets/cat_burrito.png" },
     { id: 'cat_piletina', name: { sr: 'Pileći Specijaliteti', en: 'Chicken Specialties' }, type: CategoryType.FOOD, order: 5, imageUrl: "assets/cat_chicken.png" },
-    { id: 'cat_pivo', name: { sr: 'Pivski Menu', en: 'Beer Menu' }, type: CategoryType.ALCOHOL, order: 6, imageUrl: "assets/cat_beer.png" },
-    { id: 'cat_pizza', name: { sr: 'Pizza na drva', en: 'Wood-fired Pizza' }, type: CategoryType.FOOD, order: 7, imageUrl: "assets/cat_pizza.png" },
-    { id: 'cat_dodaci_pizza', name: { sr: 'Dodaci za Pizze', en: 'Pizza Add-ons' }, type: CategoryType.FOOD, order: 8, imageUrl: "assets/cat_pizza_addons.png" },
-    { id: 'cat_slatko', name: { sr: 'Slatki Zalogaji', en: 'Sweet Bites' }, type: CategoryType.DESSERT, order: 9, imageUrl: "assets/cat_dessert.png" },
-    { id: 'cat_kupovi', name: { sr: 'Kupovi - Sladoledi', en: 'Ice Cream Cups' }, type: CategoryType.DESSERT, order: 10, imageUrl: "assets/cat_ice_cream.png", imagePosition: "center 40%" },
+    { id: 'cat_pizza', name: { sr: 'Pizza na drva', en: 'Wood-fired Pizza' }, type: CategoryType.FOOD, order: 6, imageUrl: "assets/cat_pizza.png" },
+    { id: 'cat_salate', name: { sr: 'Salate', en: 'Salads' }, type: CategoryType.FOOD, order: 7, imageUrl: "assets/cat_salads.png" },
+    { id: 'cat_paste', name: { sr: 'Paste', en: 'Pasta' }, type: CategoryType.FOOD, order: 8, imageUrl: "assets/cat_pasta.png" },
+    { id: 'cat_njoki', name: { sr: 'Njoki - Gnocchi', en: 'Gnocchi' }, type: CategoryType.FOOD, order: 9, imageUrl: "assets/cat_gnocchi.png" },
+    { id: 'cat_mlinci', name: { sr: 'Mlinci', en: 'Mlinci' }, type: CategoryType.FOOD, order: 10, imageUrl: "assets/cat_mlinci.png" },
+    { id: 'cat_pivo', name: { sr: 'Pivski Menu', en: 'Beer Menu' }, type: CategoryType.ALCOHOL, order: 11, imageUrl: "assets/cat_beer.png" },
+    { id: 'cat_dodaci_pizza', name: { sr: 'Dodaci za Pizze', en: 'Pizza Add-ons' }, type: CategoryType.FOOD, order: 12, imageUrl: "assets/cat_pizza_addons.png" },
+    { id: 'cat_slatko', name: { sr: 'Slatki Zalogaji', en: 'Sweet Bites' }, type: CategoryType.DESSERT, order: 13, imageUrl: "assets/cat_dessert.png" },
+    { id: 'cat_kupovi', name: { sr: 'Kupovi - Sladoledi', en: 'Ice Cream Cups' }, type: CategoryType.DESSERT, order: 14, imageUrl: "assets/cat_ice_cream.png", imagePosition: "center 40%" },
   ],
   items: [
     // DORUČAK
@@ -357,6 +361,116 @@ export const INITIAL_DATA: MenuState = {
       name: { sr: 'Sweet Pizza', en: 'Sweet Pizza' },
       description: { sr: 'Nutella, neutralna pavlaka, banane, sezonsko voće, menta.', en: 'Nutella, heavy cream, bananas, seasonal fruits, mint.' },
       price: 710, currency: 'RSD', isAvailable: true
+    },
+
+    // SALATE
+    {
+      id: 'sl1', categoryId: 'cat_salate',
+      name: { sr: 'Caesar', en: 'Caesar' },
+      description: { sr: 'Iceberg salata, zelena salata, krckava slanina, grilovana piletina, cezar dresing, krutoni, cherry, parmezan.', en: 'Iceberg lettuce, lettuce, crispy bacon, grilled chicken, caesar dressing, croutons, cherry tomato, parmesan.' },
+      price: 550, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sl2', categoryId: 'cat_salate',
+      name: { sr: 'Tonno', en: 'Tonno' },
+      description: { sr: 'Zelena salata, tunjevina, crveni pasulj, kukuruz šećerac, krastavac, paradajz, krutoni.', en: 'Lettuce, tuna, red beans, sweet corn, cucumber, tomato, croutons.' },
+      price: 560, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sl3', categoryId: 'cat_salate',
+      name: { sr: 'Grčka', en: 'Greek' },
+      description: { sr: 'Paradajz, krastavac, crveni luk, feta sir, masline.', en: 'Tomato, cucumber, red onion, feta cheese, olives.' },
+      price: 440, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sl4', categoryId: 'cat_salate',
+      name: { sr: 'Toscana', en: 'Toscana' },
+      description: { sr: 'Dimljena ćuretina, dimljeni kačkavalj, maslinovo ulje, origano, cherry, rukola.', en: 'Smoked turkey, smoked cheese, olive oil, oregano, cherry tomato, arugula.' },
+      price: 590, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sl5', categoryId: 'cat_salate',
+      name: { sr: 'Paradajz', en: 'Tomato' },
+      description: { sr: 'Svež paradajz.', en: 'Fresh tomato.' },
+      price: 250, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sl6', categoryId: 'cat_salate',
+      name: { sr: 'Krastavac', en: 'Cucumber' },
+      description: { sr: 'Svež krastavac.', en: 'Fresh cucumber.' },
+      price: 250, currency: 'RSD', isAvailable: true
+    },
+
+    // PASTE
+    {
+      id: 'ps1', categoryId: 'cat_paste',
+      name: { sr: 'Carbonara', en: 'Carbonara' },
+      description: { sr: 'Pančeta, neutralna pavlaka, špagete, belo vino, žumance, parmezan.', en: 'Pancetta, heavy cream, spaghetti, white wine, egg yolk, parmesan.' },
+      price: 620, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'ps2', categoryId: 'cat_paste',
+      name: { sr: 'Toscana (Pasta sa pečurkama)', en: 'Toscana (Mushroom Pasta)' },
+      description: { sr: 'Ragu od pečuraka, neutralna pavlaka, pene, parmezan.', en: 'Mushroom ragout, heavy cream, penne, parmesan.' },
+      price: 640, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'ps3', categoryId: 'cat_paste',
+      name: { sr: 'Pesto Genovese', en: 'Pesto Genovese' },
+      description: { sr: 'Piletina, neutralna pavlaka, pesto sos, pene, parmezan.', en: 'Chicken, heavy cream, pesto sauce, penne, parmesan.' },
+      price: 610, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'ps4', categoryId: 'cat_paste',
+      name: { sr: 'Bolognese', en: 'Bolognese' },
+      description: { sr: 'Špagete, bolognese sos, juneće meso, pelat, parmezan, crno vino.', en: 'Spaghetti, bolognese sauce, beef, tomato sauce, parmesan, red wine.' },
+      price: 620, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'ps5', categoryId: 'cat_paste',
+      name: { sr: 'Vegetariana (posno)', en: 'Vegetarian (Lenten)' },
+      description: { sr: 'Špagete, tikvice, šampinjoni, pelat, biljni sir, masline.', en: 'Spaghetti, zucchini, mushrooms, tomato sauce, vegan cheese, olives.' },
+      price: 550, currency: 'RSD', isAvailable: true
+    },
+
+    // GNOCCHI - NJOKI
+    {
+      id: 'gn1', categoryId: 'cat_njoki',
+      name: { sr: 'Njoki Pečurke', en: 'Gnocchi Mushroom' },
+      description: { sr: 'Njoke, ragu od pečuraka, neutralna pavlaka, parmezan.', en: 'Gnocchi, mushroom ragout, heavy cream, parmesan.' },
+      price: 610, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'gn2', categoryId: 'cat_njoki',
+      name: { sr: 'Njoki Bolognese', en: 'Gnocchi Bolognese' },
+      description: { sr: 'Njoke, bolognese sos, parmezan.', en: 'Gnocchi, bolognese sauce, parmesan.' },
+      price: 590, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'gn3', categoryId: 'cat_njoki',
+      name: { sr: 'Njoki La Toscana (4 vrste sira)', en: 'Gnocchi La Toscana (4 Cheeses)' },
+      description: { sr: 'Njoke, gauda, gorgonzola, krem sir, parmezan, neutralna pavlaka.', en: 'Gnocchi, gouda, gorgonzola, cream cheese, parmesan, heavy cream.' },
+      price: 610, currency: 'RSD', isAvailable: true
+    },
+
+    // MLINCI
+    {
+      id: 'ml1', categoryId: 'cat_mlinci',
+      name: { sr: 'Ćuretina', en: 'Turkey' },
+      description: { sr: 'Mlinci, ćuretina, gauda, neutralna pavlaka, kisela pavlaka, pileći bujon, italijanska mešavina.', en: 'Mlinci, turkey, gouda, heavy cream, sour cream, chicken broth, Italian mix.' },
+      price: 650, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'ml2', categoryId: 'cat_mlinci',
+      name: { sr: 'Dimljeni batak i pileće grudi', en: 'Smoked Drumstick & Chicken Breast' },
+      description: { sr: 'Mlinci, dimljeni pileći batak i grudi, gauda, neutralna pavlaka, kisela pavlaka, pileći bujon, italijanska mešavina.', en: 'Mlinci, smoked chicken drumstick and breast, gouda, heavy cream, sour cream, chicken broth, Italian mix.' },
+      price: 630, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'ml3', categoryId: 'cat_mlinci',
+      name: { sr: 'Dimljena svinjska butkica', en: 'Smoked Pork Leg' },
+      description: { sr: 'Mlinci, dimljena svinjska butkica, gauda, neutralna pavlaka, kisela pavlaka, pileći bujon, italijanska mešavina.', en: 'Mlinci, smoked pork leg, gouda, heavy cream, sour cream, chicken broth, Italian mix.' },
+      price: 630, currency: 'RSD', isAvailable: true
     },
 
     // DODACI ZA PIZZE
