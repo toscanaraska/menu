@@ -26,13 +26,13 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cat_paste', name: { sr: 'Paste', en: 'Pasta' }, type: CategoryType.FOOD, order: 8, imageUrl: "assets/cat_pasta.png" },
     { id: 'cat_njoki', name: { sr: 'Njoki - Gnocchi', en: 'Gnocchi' }, type: CategoryType.FOOD, order: 9, imageUrl: "assets/cat_gnocchi.png" },
     { id: 'cat_mlinci', name: { sr: 'Mlinci', en: 'Mlinci' }, type: CategoryType.FOOD, order: 10, imageUrl: "assets/cat_mlinci.png" },
-    { id: 'cat_pivski_menu', name: { sr: 'Pivski Menu (Hrana)', en: 'Beer Menu (Food)' }, type: CategoryType.FOOD, order: 11, imageUrl: "assets/cat_savory.png" },
+    { id: 'cat_pivski_menu', name: { sr: 'Pivski Menu', en: 'Beer Menu' }, type: CategoryType.FOOD, order: 11, imageUrl: "assets/cat_savory.png" },
     { id: 'cat_dodaci_pizza', name: { sr: 'Dodaci za Pizze', en: 'Pizza Add-ons' }, type: CategoryType.FOOD, order: 12, imageUrl: "assets/cat_pizza_addons.png" },
     { id: 'cat_slatko', name: { sr: 'Slatki Zalogaji', en: 'Sweet Bites' }, type: CategoryType.DESSERT, order: 13, imageUrl: "assets/cat_dessert.png" },
     { id: 'cat_kupovi', name: { sr: 'Kupovi - Sladoledi', en: 'Ice Cream Cups' }, type: CategoryType.DESSERT, order: 14, imageUrl: "assets/cat_ice_cream.png", imagePosition: "center 40%" },
 
     // DRINK CATEGORIES (20+)
-    { id: 'cat_hot_drinks', name: { sr: 'Topli i Hladni Napici', en: 'Hot & Cold Drinks' }, type: CategoryType.COFFEE, order: 20, imageUrl: "assets/cat_breakfast.png" },
+    { id: 'cat_hot_drinks', name: { sr: 'Topli i Hladni Napici', en: 'Hot & Cold Drinks' }, type: CategoryType.COFFEE, order: 20, imageUrl: "assets/cat_coffee.png" },
     { id: 'cat_water', name: { sr: 'Vode', en: 'Water' }, type: CategoryType.DRINK, order: 21, imageUrl: "assets/cat_water.png" },
     { id: 'cat_soft_drinks_gaz', name: { sr: 'Bezalkoholna (Gazirana)', en: 'Soft Drinks (Sparkling)' }, type: CategoryType.NON_ALCOHOL, order: 22, imageUrl: "assets/cat_soft_drinks_gaz.png" },
     { id: 'cat_soft_drinks_neg', name: { sr: 'Bezalkoholna (Negazirana)', en: 'Soft Drinks (Still)' }, type: CategoryType.NON_ALCOHOL, order: 23, imageUrl: "assets/cat_soft_drinks_neg.png" },
