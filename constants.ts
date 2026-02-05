@@ -40,7 +40,7 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cat_zestina_domaca', name: { sr: 'Žestoka (Domaća)', en: 'Spirits (Domestic)' }, type: CategoryType.ALCOHOL, order: 25, imageUrl: "assets/cat_spirits_dom.png" },
     { id: 'cat_zestina_strana', name: { sr: 'Žestoka (Strana)', en: 'Spirits (Foreign)' }, type: CategoryType.ALCOHOL, order: 26, imageUrl: "assets/cat_spirits_str.png" },
     { id: 'cat_whiskey_konjak', name: { sr: 'Viski & Konjak', en: 'Whiskey & Cognac' }, type: CategoryType.ALCOHOL, order: 27, imageUrl: "assets/cat_whiskey.png" },
-    { id: 'cat_likeri', name: { sr: 'Likeri', en: 'Liqueurs' }, type: CategoryType.ALCOHOL, order: 28, imageUrl: "assets/cat_cocktails.png" },
+    { id: 'cat_likeri', name: { sr: 'Likeri', en: 'Liqueurs' }, type: CategoryType.ALCOHOL, order: 28, imageUrl: "assets/cat_liqueurs.png" },
     { id: 'cat_cocktails', name: { sr: 'Kokteli & Mešana Pića', en: 'Cocktails & Mixed Drinks' }, type: CategoryType.ALCOHOL, order: 29, imageUrl: "assets/cat_cocktails.png" },
   ],
   items: [
