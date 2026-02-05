@@ -6,7 +6,11 @@ export const INITIAL_DATA: MenuState = {
     name: "La Toscana",
     address: { sr: "Raška, Srbija", en: "Raska, Serbia" },
     phone: "060 439 000 9",
-    workHours: { sr: "Pon - Ned: 08:00 - 23:00", en: "Mon - Sun: 08:00 - 23:00" },
+    instagram: "https://www.instagram.com/la____toscana/",
+    workHours: {
+      sr: "Pon - Sub: 08:00 - 23:00 | Nedelja: 09:00 - 23:00",
+      en: "Mon - Sat: 08:00 - 23:00 | Sunday: 09:00 - 23:00"
+    },
     coordinates: { lat: 43.2841875, lng: 20.6148125 }
   },
   language: 'sr',

@@ -32,6 +32,7 @@ export interface RestaurantInfo {
   logo?: string;
   address: { sr: string; en: string };
   phone: string;
+  instagram?: string;
   workHours: { sr: string; en: string };
   coordinates?: {
     lat: number;
