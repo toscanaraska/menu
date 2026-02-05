@@ -3,7 +3,9 @@ export enum CategoryType {
   FOOD = 'FOOD',
   ALCOHOL = 'ALCOHOL',
   NON_ALCOHOL = 'NON_ALCOHOL',
-  DESSERT = 'DESSERT'
+  DESSERT = 'DESSERT',
+  COFFEE = 'COFFEE',
+  DRINK = 'DRINK'
 }
 
 export interface MenuItem {

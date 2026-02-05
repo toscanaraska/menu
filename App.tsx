@@ -8,7 +8,10 @@ import MenuItemCard from './components/MenuItemCard';
 const App: React.FC = () => {
   const [data] = useState<MenuState>(INITIAL_DATA);
   const [language, setLanguage] = useState<'sr' | 'en'>('sr');
-  const [activeCategoryId, setActiveCategoryId] = useState<string>(INITIAL_DATA.categories[0].id);
+  const [menuType, setMenuType] = useState<'FOOD' | 'DRINK'>('FOOD');
+  const [activeCategoryId, setActiveCategoryId] = useState<string>(
+    INITIAL_DATA.categories.find(c => c.order < 20)?.id || INITIAL_DATA.categories[0].id
+  );
   const [searchQuery, setSearchQuery] = useState("");
 
   const normalizeText = (text: string) => {
@@ -29,6 +32,12 @@ const App: React.FC = () => {
     );
   }, [data.items, searchQuery, language]);
 
+  const visibleCategories = useMemo(() => {
+    return data.categories
+      .filter(cat => menuType === 'FOOD' ? cat.order < 20 : cat.order >= 20)
+      .sort((a, b) => a.order - b.order);
+  }, [data.categories, menuType]);
+
   const activeCategory = useMemo(() => {
     return data.categories.find(c => c.id === activeCategoryId);
   }, [data.categories, activeCategoryId]);
@@ -43,6 +52,18 @@ const App: React.FC = () => {
     if (searchQuery) setSearchQuery("");
   };
 
+  const handleMenuTypeToggle = (type: 'FOOD' | 'DRINK') => {
+    if (menuType === type) return;
+    setMenuType(type);
+    setSearchQuery("");
+    // Find first category of new type
+    const firstCat = data.categories.find(c => type === 'FOOD' ? c.order < 20 : c.order >= 20);
+    if (firstCat) setActiveCategoryId(firstCat.id);
+
+    // Smooth scroll to top when switching
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleLanguageToggle = () => {
     setLanguage(prev => prev === 'sr' ? 'en' : 'sr');
   };
@@ -53,6 +74,8 @@ const App: React.FC = () => {
   const labels = {
     search: { sr: "Pretraži meni...", en: "Search menu..." },
     noResults: { sr: "Nema rezultata za pretragu.", en: "No results found." },
+    food: { sr: "Hrana", en: "Food" },
+    drink: { sr: "Piće", en: "Drinks" },
     menu: { sr: "Meni", en: "Menu" },
     map: { sr: "Mapa", en: "Map" },
     reviews: { sr: "Recenzije", en: "Reviews" }
@@ -64,13 +87,43 @@ const App: React.FC = () => {
       language={language}
       onLanguageToggle={handleLanguageToggle}
     >
+      {/* Food / Drink Toggle */}
+      <div className="px-6 pt-8 w-full max-w-4xl mx-auto flex justify-center">
+        <div className="flex bg-white/[0.03] p-1.5 rounded-3xl border border-white/5 shadow-2xl backdrop-blur-md">
+          <button
+            onClick={() => handleMenuTypeToggle('FOOD')}
+            className={`flex items-center gap-3 px-8 py-4 rounded-2xl text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ease-out active:scale-95 ${menuType === 'FOOD'
+              ? 'bg-amber-500 text-black shadow-xl shadow-amber-500/20'
+              : 'text-slate-500 hover:text-slate-300'
+              }`}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            {labels.food[language]}
+          </button>
+          <button
+            onClick={() => handleMenuTypeToggle('DRINK')}
+            className={`flex items-center gap-3 px-8 py-4 rounded-2xl text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 ease-out active:scale-95 ${menuType === 'DRINK'
+              ? 'bg-amber-500 text-black shadow-xl shadow-amber-500/20'
+              : 'text-slate-500 hover:text-slate-300'
+              }`}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M11 4.5a1 1 0 011.892 0l.915 2.193a.5.5 0 00.322.288l2.317.47a1 1 0 01.524 1.704l-1.636 1.701a.5.5 0 00-.131.428l.341 2.378a1 1 0 01-1.397 1.053l-2.062-1.01a.5.5 0 00-.45 0l-2.062 1.01a1 1 0 01-1.397-1.053l.341-2.378a.5.5 0 00-.131-.428l-1.636-1.701a1 1 0 01.524-1.704l2.317-.47a.5.5 0 00.322-.288L11 4.5z" />
+            </svg>
+            {labels.drink[language]}
+          </button>
+        </div>
+      </div>
+
       {/* Search Bar Section */}
-      <div className="px-6 pt-6 md:pt-10 w-full max-w-4xl mx-auto">
+      <div className="px-6 pt-6 w-full max-w-4xl mx-auto">
         <div className="relative group">
           <input
             type="text"
             placeholder={labels.search[language]}
-            className="w-full pl-12 pr-4 py-4 md:py-5 bg-white/[0.02] border border-white/5 rounded-2xl text-base text-slate-100 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-500/30 transition-all shadow-xl"
+            className="w-full pl-12 pr-4 py-4 md:py-5 bg-white/[0.02] border border-white/5 rounded-2xl text-sm md:text-base text-slate-100 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-500/30 transition-all shadow-xl"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -84,7 +137,7 @@ const App: React.FC = () => {
       <div className="sticky top-[81px] md:top-[93px] z-40 bg-[#2d1b36]/80 backdrop-blur-xl border-b border-white/5 overflow-hidden">
         <div className="max-w-7xl mx-auto overflow-x-auto no-scrollbar scroll-smooth">
           <div className="flex gap-2 md:gap-4 px-6 py-4 min-w-max md:justify-center">
-            {data.categories.sort((a, b) => a.order - b.order).map(cat => (
+            {visibleCategories.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => handleCategoryChange(cat.id)}
