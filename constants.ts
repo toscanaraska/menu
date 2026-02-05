@@ -552,6 +552,9 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cd16', categoryId: 'cat_hot_drinks', name: { sr: 'Čaj - ALTHAUS', en: 'Tea - ALTHAUS' }, description: { sr: 'Razni ukusi.', en: 'Assorted flavors.' }, price: 150, currency: 'RSD', isAvailable: true },
     { id: 'cd17', categoryId: 'cat_hot_drinks', name: { sr: 'Kakao', en: 'Cocoa' }, description: { sr: 'Topli kakao.', en: 'Hot cocoa.' }, price: 120, currency: 'RSD', isAvailable: true },
     { id: 'cd18', categoryId: 'cat_hot_drinks', name: { sr: 'Kuvano vino', en: 'Mulled Wine' }, description: { sr: 'Kuvano crno ili belo vino.', en: 'Mulled red or white wine.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'cd_mleko', categoryId: 'cat_hot_drinks', name: { sr: 'Dodatak - Mleko', en: 'Add-on - Milk' }, description: { sr: 'Dodatna porcija mleka.', en: 'Extra serving of milk.' }, price: 50, currency: 'RSD', isAvailable: true },
+    { id: 'cd_slag', categoryId: 'cat_hot_drinks', name: { sr: 'Dodatak - Šlag', en: 'Add-on - Whipped Cream' }, description: { sr: 'Dodatna porcija šlaga.', en: 'Extra serving of whipped cream.' }, price: 50, currency: 'RSD', isAvailable: true },
+    { id: 'cd_med', categoryId: 'cat_hot_drinks', name: { sr: 'Dodatak - Med', en: 'Add-on - Honey' }, description: { sr: 'Dodatna porcija meda.', en: 'Extra serving of honey.' }, price: 50, currency: 'RSD', isAvailable: true },
 
     // VODE (cat_water)
     { id: 'w1', categoryId: 'cat_water', name: { sr: 'Rosa (negazirana) 0.33', en: 'Rosa (still) 0.33' }, description: { sr: 'Voda 0.33l.', en: 'Water 0.33l.' }, price: 160, currency: 'RSD', isAvailable: true },
