@@ -10,7 +10,7 @@ const App: React.FC = () => {
   const [language, setLanguage] = useState<'sr' | 'en'>('sr');
   const [menuType, setMenuType] = useState<'FOOD' | 'DRINK'>('FOOD');
   const [activeCategoryId, setActiveCategoryId] = useState<string>(
-    INITIAL_DATA.categories.find(c => c.order < 20)?.id || INITIAL_DATA.categories[0].id
+    INITIAL_DATA.categories[0].id
   );
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -78,7 +78,8 @@ const App: React.FC = () => {
     drink: { sr: "Piće", en: "Drinks" },
     menu: { sr: "Meni", en: "Menu" },
     map: { sr: "Mapa", en: "Map" },
-    reviews: { sr: "Recenzije", en: "Reviews" }
+    reviews: { sr: "Recenzije", en: "Reviews" },
+    searchResults: { sr: "Rezultati pretrage za", en: "Search results for" }
   };
 
   return (
@@ -153,6 +154,15 @@ const App: React.FC = () => {
         </div>
       </div>
 
+      {/* Search Header */}
+      {searchQuery && (
+        <div className="px-6 pt-12 pb-4 w-full max-w-4xl mx-auto text-center border-b border-white/5 mb-8">
+          <h2 className="text-slate-400 text-xs font-black uppercase tracking-[0.2em]">
+            {labels.searchResults[language]}: <span className="text-amber-500">"{searchQuery}"</span>
+          </h2>
+        </div>
+      )}
+
       {/* Category Hero Section */}
       {!searchQuery && activeCategory && activeCategory.imageUrl && (
         <div className="relative w-full h-[200px] md:h-[300px] overflow-hidden flex items-center justify-center">
@@ -172,18 +182,31 @@ const App: React.FC = () => {
       )}
 
       {/* Items Grid Layout */}
-      <div className={`px-4 py-8 md:px-8 max-w-7xl mx-auto w-full mb-24 ${!searchQuery && activeCategory?.imageUrl ? '-mt-6 relative z-10' : ''}`}>
-        {activeItems.length > 0 ? (
+      <div className={`px-4 py-8 md:px-8 max-w-7xl mx-auto w-full mb-24 transition-all duration-500 ${!searchQuery && activeCategory?.imageUrl ? '-mt-6 relative z-10' : ''}`}>
+        {searchQuery ? (
+          filteredItems.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              {filteredItems.map(item => (
+                <MenuItemCard key={`search-${item.id}`} item={item} language={language} />
+              ))}
+            </div>
+          ) : (
+            <div className="py-24 text-center w-full animate-in fade-in duration-700">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/[0.03] text-slate-600">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <p className="text-slate-500 text-sm font-bold uppercase tracking-widest">
+                {labels.noResults[language]}
+              </p>
+            </div>
+          )
+        ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             {activeItems.map(item => (
-              <MenuItemCard key={item.id} item={item} language={language} />
+              <MenuItemCard key={`cat-${item.id}`} item={item} language={language} />
             ))}
-          </div>
-        ) : (
-          <div className="py-24 text-center w-full">
-            <p className="text-slate-600 text-sm font-medium">
-              {labels.noResults[language]}
-            </p>
           </div>
         )}
       </div>
