@@ -26,12 +26,13 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cat_paste', name: { sr: 'Paste', en: 'Pasta' }, type: CategoryType.FOOD, order: 8, imageUrl: "assets/cat_pasta.png" },
     { id: 'cat_njoki', name: { sr: 'Njoki - Gnocchi', en: 'Gnocchi' }, type: CategoryType.FOOD, order: 9, imageUrl: "assets/cat_gnocchi.png" },
     { id: 'cat_mlinci', name: { sr: 'Mlinci', en: 'Mlinci' }, type: CategoryType.FOOD, order: 10, imageUrl: "assets/cat_mlinci.png" },
-    { id: 'cat_dodaci_pizza', name: { sr: 'Dodaci za Pizze', en: 'Pizza Add-ons' }, type: CategoryType.FOOD, order: 11, imageUrl: "assets/cat_pizza_addons.png" },
-    { id: 'cat_slatko', name: { sr: 'Slatki Zalogaji', en: 'Sweet Bites' }, type: CategoryType.DESSERT, order: 12, imageUrl: "assets/cat_dessert.png" },
-    { id: 'cat_kupovi', name: { sr: 'Kupovi - Sladoledi', en: 'Ice Cream Cups' }, type: CategoryType.DESSERT, order: 13, imageUrl: "assets/cat_ice_cream.png", imagePosition: "center 40%" },
+    { id: 'cat_pivski_menu', name: { sr: 'Pivski Menu (Hrana)', en: 'Beer Menu (Food)' }, type: CategoryType.FOOD, order: 11, imageUrl: "assets/cat_savory.png" },
+    { id: 'cat_dodaci_pizza', name: { sr: 'Dodaci za Pizze', en: 'Pizza Add-ons' }, type: CategoryType.FOOD, order: 12, imageUrl: "assets/cat_pizza_addons.png" },
+    { id: 'cat_slatko', name: { sr: 'Slatki Zalogaji', en: 'Sweet Bites' }, type: CategoryType.DESSERT, order: 13, imageUrl: "assets/cat_dessert.png" },
+    { id: 'cat_kupovi', name: { sr: 'Kupovi - Sladoledi', en: 'Ice Cream Cups' }, type: CategoryType.DESSERT, order: 14, imageUrl: "assets/cat_ice_cream.png", imagePosition: "center 40%" },
 
     // DRINK CATEGORIES (20+)
-    { id: 'cat_hot_drinks', name: { sr: 'Topli i Hladni Napici', en: 'Hot & Cold Drinks' }, type: CategoryType.COFFEE, order: 20, imageUrl: "assets/cat_coffee.png" },
+    { id: 'cat_hot_drinks', name: { sr: 'Topli i Hladni Napici', en: 'Hot & Cold Drinks' }, type: CategoryType.COFFEE, order: 20, imageUrl: "assets/cat_breakfast.png" },
     { id: 'cat_water', name: { sr: 'Vode', en: 'Water' }, type: CategoryType.DRINK, order: 21, imageUrl: "assets/cat_water.png" },
     { id: 'cat_soft_drinks_gaz', name: { sr: 'Bezalkoholna (Gazirana)', en: 'Soft Drinks (Sparkling)' }, type: CategoryType.NON_ALCOHOL, order: 22, imageUrl: "assets/cat_soft_drinks_gaz.png" },
     { id: 'cat_soft_drinks_neg', name: { sr: 'Bezalkoholna (Negazirana)', en: 'Soft Drinks (Still)' }, type: CategoryType.NON_ALCOHOL, order: 23, imageUrl: "assets/cat_soft_drinks_neg.png" },
@@ -39,7 +40,7 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cat_zestina_domaca', name: { sr: 'Žestoka (Domaća)', en: 'Spirits (Domestic)' }, type: CategoryType.ALCOHOL, order: 25, imageUrl: "assets/cat_spirits_dom.png" },
     { id: 'cat_zestina_strana', name: { sr: 'Žestoka (Strana)', en: 'Spirits (Foreign)' }, type: CategoryType.ALCOHOL, order: 26, imageUrl: "assets/cat_spirits_str.png" },
     { id: 'cat_whiskey_konjak', name: { sr: 'Viski & Konjak', en: 'Whiskey & Cognac' }, type: CategoryType.ALCOHOL, order: 27, imageUrl: "assets/cat_whiskey.png" },
-    { id: 'cat_likeri', name: { sr: 'Likeri', en: 'Liqueurs' }, type: CategoryType.ALCOHOL, order: 28, imageUrl: "assets/cat_liqueurs.png" },
+    { id: 'cat_likeri', name: { sr: 'Likeri', en: 'Liqueurs' }, type: CategoryType.ALCOHOL, order: 28, imageUrl: "assets/cat_cocktails.png" },
     { id: 'cat_cocktails', name: { sr: 'Kokteli & Mešana Pića', en: 'Cocktails & Mixed Drinks' }, type: CategoryType.ALCOHOL, order: 29, imageUrl: "assets/cat_cocktails.png" },
   ],
   items: [
@@ -256,25 +257,25 @@ export const INITIAL_DATA: MenuState = {
 
     // PIVSKI MENU
     {
-      id: 'be1', categoryId: 'cat_pivo',
+      id: 'be1', categoryId: 'cat_pivski_menu',
       name: { sr: 'Kobaja Toscana 1 Metar (oko 1 kg)', en: 'Toscana Sausage 1 Meter (approx 1kg)' },
       description: { sr: 'Kobasica punjena najkvalitetnijim goveđim i svinjskim mesom i kačkavaljem, aromatizovani krompir, 3 vrste sosa.', en: 'Sausage stuffed with high-quality beef, pork, and cheese, seasoned potatoes, 3 types of sauce.' },
       price: 2650, currency: 'RSD', isAvailable: true
     },
     {
-      id: 'be2', categoryId: 'cat_pivo',
+      id: 'be2', categoryId: 'cat_pivski_menu',
       name: { sr: 'Kobaja Toscana po izboru (2 kom - 300 gr)', en: 'Toscana Sausage Choice (2 pcs - 300g)' },
       description: { sr: 'Izbor: Toscana, Toscana Ljuta, Toscana Pivska, Toscana Goveđa Ljuta, Toscana Punjena. Sadrži aromatizovani krompir i soseve.', en: 'Choice: Toscana, Spicy, Beer, Beef Spicy, Stuffed. Includes seasoned potatoes and sauces.' },
       price: 950, currency: 'RSD', isAvailable: true
     },
     {
-      id: 'be3', categoryId: 'cat_pivo',
+      id: 'be3', categoryId: 'cat_pivski_menu',
       name: { sr: 'Toskana Kobaja Mix za 2 osobe (oko 600 gr)', en: 'Toscana Sausage Mix for 2 (approx 600g)' },
       description: { sr: 'Miks kobasica (Punjena, Pivska, Goveđa Ljuta, Kobasica), aromatizovani krompir, sosevi.', en: 'Mixed sausages (Stuffed, Beer, Beef Spicy, Original), seasoned potatoes, sauces.' },
       price: 1750, currency: 'RSD', isAvailable: true
     },
     {
-      id: 'be4', categoryId: 'cat_pivo',
+      id: 'be4', categoryId: 'cat_pivski_menu',
       name: { sr: 'Toskana Kobaja Mix za 4 osobe (oko 1,2 kg)', en: 'Toscana Sausage Mix for 4 (approx 1.2kg)' },
       description: { sr: 'Dupli miks kobasica, aromatizovani krompir, sosevi.', en: 'Double sausage mix, seasoned potatoes, sauces.' },
       price: 3500, currency: 'RSD', isAvailable: true
