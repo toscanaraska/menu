@@ -1,0 +1,7 @@
+{
+  "name": "Digital Menu Pro",
+  "description": "Modern digital restaurant menu with AI-powered data extraction from images and future-proof scalable architecture.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
