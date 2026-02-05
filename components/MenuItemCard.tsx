@@ -17,9 +17,11 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({ item, language }) => {
         <h3 className="font-bold text-slate-100 text-[16px] md:text-[17px] leading-tight group-hover:text-amber-400 transition-colors">
           {item.name[language]}
         </h3>
-        <span className="font-black text-amber-500 ml-3 tabular-nums text-base shrink-0">
-          {item.price.toLocaleString('sr-RS')}<span className="text-[10px] ml-0.5 opacity-50 uppercase tracking-tighter">RSD</span>
-        </span>
+        {item.price !== undefined && (
+          <span className="font-black text-amber-500 ml-3 tabular-nums text-base shrink-0">
+            {item.price.toLocaleString('sr-RS')}<span className="text-[10px] ml-0.5 opacity-50 uppercase tracking-tighter">RSD</span>
+          </span>
+        )}
       </div>
 
       <div className="flex gap-4 flex-1 relative z-10">

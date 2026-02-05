@@ -13,7 +13,7 @@ export interface MenuItem {
   categoryId: string;
   name: { sr: string; en: string };
   description: { sr: string; en: string };
-  price: number;
+  price?: number;
   currency: string;
   imageUrl?: string;
   isAvailable: boolean;
