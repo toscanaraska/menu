@@ -11,10 +11,21 @@ const App: React.FC = () => {
   const [activeCategoryId, setActiveCategoryId] = useState<string>(INITIAL_DATA.categories[0].id);
   const [searchQuery, setSearchQuery] = useState("");
 
+  const normalizeText = (text: string) => {
+    return text
+      .toLowerCase()
+      .replace(/š/g, 's')
+      .replace(/đ/g, 'd')
+      .replace(/ž/g, 'z')
+      .replace(/č/g, 'c')
+      .replace(/ć/g, 'c');
+  };
+
   const filteredItems = useMemo(() => {
+    const query = normalizeText(searchQuery);
     return data.items.filter(item =>
-      item.name[language].toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description[language].toLowerCase().includes(searchQuery.toLowerCase())
+      normalizeText(item.name[language]).includes(query) ||
+      normalizeText(item.description[language]).includes(query)
     );
   }, [data.items, searchQuery, language]);
 
