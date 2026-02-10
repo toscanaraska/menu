@@ -521,9 +521,6 @@ export const INITIAL_DATA: MenuState = {
     { id: 'sw12', categoryId: 'cat_slatko', name: { sr: 'Palačinka Šumsko voće', en: 'Forest Fruit Crepe' }, description: { sr: 'Nutella, vanila krem, šumsko voće.', en: 'Nutella, vanilla cream, forest fruit.' }, price: 360, currency: 'RSD', isAvailable: true },
     { id: 'sw13', categoryId: 'cat_slatko', name: { sr: 'Knedle (porcija 3 kom)', en: 'Dumplings (3 pcs portion)' }, description: { sr: 'Šljive, nutela, maline.', en: 'Plums, nutella, raspberries.' }, price: 390, currency: 'RSD', isAvailable: true },
     { id: 'sw14', categoryId: 'cat_slatko', name: { sr: 'Galete', en: 'Waffles/Galettes' }, description: { sr: 'Tradicionalne galete.', en: 'Traditional galettes.' }, price: 250, currency: 'RSD', isAvailable: true },
-    { id: 'sw15', categoryId: 'cat_slatko', name: { sr: 'Muffins', en: 'Muffins' }, description: { sr: 'Malina, nutela.', en: 'Raspberry, nutella.' }, price: 250, currency: 'RSD', isAvailable: true },
-    { id: 'sw16', categoryId: 'cat_slatko', name: { sr: 'Cheesecake', en: 'Cheesecake' }, description: { sr: 'Malina, nutela.', en: 'Raspberry, nutella.' }, price: 350, currency: 'RSD', isAvailable: true },
-    { id: 'sw17', categoryId: 'cat_slatko', name: { sr: 'Brownies', en: 'Brownies' }, description: { sr: 'Čokoladni brauni.', en: 'Chocolate brownies.' }, price: 350, currency: 'RSD', isAvailable: true },
 
     // KUPOVI - SLADOLEDI
     { id: 'k1', categoryId: 'cat_kupovi', name: { sr: 'Voćni kup', en: 'Fruit Cup' }, description: { sr: 'Sladoled, voće, šlag, preliv.', en: 'Ice cream, fruit, whipped cream, topping.' }, price: 390, currency: 'RSD', isAvailable: true },
