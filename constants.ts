@@ -27,9 +27,10 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cat_njoki', name: { sr: 'Njoki - Gnocchi', en: 'Gnocchi' }, type: CategoryType.FOOD, order: 10, imageUrl: "assets/cat_gnocchi.png" },
     { id: 'cat_mlinci', name: { sr: 'Mlinci', en: 'Mlinci' }, type: CategoryType.FOOD, order: 11, imageUrl: "assets/cat_mlinci.png" },
     { id: 'cat_pivski_menu', name: { sr: 'Pivski Menu', en: 'Beer Menu' }, type: CategoryType.FOOD, order: 12, imageUrl: "assets/cat_savory.png" },
-    { id: 'cat_dodaci_pizza', name: { sr: 'Dodaci za Pizze', en: 'Pizza Add-ons' }, type: CategoryType.FOOD, order: 7, imageUrl: "assets/cat_pizza_addons.png" },
-    { id: 'cat_slatko', name: { sr: 'Slatki Zalogaji', en: 'Sweet Bites' }, type: CategoryType.DESSERT, order: 13, imageUrl: "assets/cat_dessert.png" },
-    { id: 'cat_kupovi', name: { sr: 'Kupovi - Sladoledi', en: 'Ice Cream Cups' }, type: CategoryType.DESSERT, order: 14, imageUrl: "assets/cat_ice_cream.png", imagePosition: "center 40%" },
+    { id: 'cat_meso', name: { sr: 'Jela od Mesa', en: 'Meat Dishes' }, type: CategoryType.FOOD, order: 13, imageUrl: "assets/cat_chicken.png" },
+    { id: 'cat_dodaci_pizza', name: { sr: 'Dodaci za Pizze', en: 'Pizza Add-ons' }, type: CategoryType.FOOD, order: 14, imageUrl: "assets/cat_pizza_addons.png" },
+    { id: 'cat_slatko', name: { sr: 'Slatki Zalogaji', en: 'Sweet Bites' }, type: CategoryType.DESSERT, order: 15, imageUrl: "assets/cat_dessert.png" },
+    { id: 'cat_kupovi', name: { sr: 'Kupovi - Sladoledi', en: 'Ice Cream Cups' }, type: CategoryType.DESSERT, order: 16, imageUrl: "assets/cat_ice_cream.png", imagePosition: "center 40%" },
 
     // DRINK CATEGORIES (20+)
     { id: 'cat_hot_drinks', name: { sr: 'Topli i Hladni Napici', en: 'Hot & Cold Drinks' }, type: CategoryType.COFFEE, order: 20, imageUrl: "assets/cat_coffee.png" },
@@ -165,11 +166,28 @@ export const INITIAL_DATA: MenuState = {
       price: 490, currency: 'RSD', isAvailable: true
     },
     {
-      id: 's11', categoryId: 'cat_sendvici',
-      name: { sr: 'Tacos (po izboru)', en: 'Tacos (Choice of Meat)' },
-      description: { sr: 'Tortilja, sir gauda, šunka, kulen, svinjska pršuta, pavlaka, paprika, čili, luk ili tartar sos.', en: 'Tortilla, gouda, ham, spicy salami, pork prosciutto, cream, pepper, chili, onion or tartar sauce.' },
-      price: 470, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['Od 470 do 500 RSD'], en: ['From 470 to 500 RSD'] }
+      id: 's11a', categoryId: 'cat_sendvici',
+      name: { sr: 'Tacos - Šunka', en: 'Tacos - Ham' },
+      description: { sr: 'Tortilja, sir gauda, šunka, pavlaka, paprika, čili, luk ili tartar sos.', en: 'Tortilla, gouda, ham, cream, pepper, chili, onion or tartar sauce.' },
+      price: 470, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 's11b', categoryId: 'cat_sendvici',
+      name: { sr: 'Tacos - Kulen', en: 'Tacos - Kulen' },
+      description: { sr: 'Tortilja, sir gauda, kulen, pavlaka, paprika, čili, luk ili tartar sos.', en: 'Tortilla, gouda, kulen sausage, cream, pepper, chili, onion or tartar sauce.' },
+      price: 480, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 's11c', categoryId: 'cat_sendvici',
+      name: { sr: 'Tacos - Svinjska pršuta', en: 'Tacos - Pork Prosciutto' },
+      description: { sr: 'Tortilja, sir gauda, svinjska pršuta, pavlaka, paprika, čili, luk ili tartar sos.', en: 'Tortilla, gouda, pork prosciutto, cream, pepper, chili, onion or tartar sauce.' },
+      price: 490, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 's11d', categoryId: 'cat_sendvici',
+      name: { sr: 'Tacos - Govedja pršuta', en: 'Tacos - Beef Prosciutto' },
+      description: { sr: 'Tortilja, sir gauda, govedja pršuta, pavlaka, paprika, čili, luk ili tartar sos.', en: 'Tortilla, gouda, beef prosciutto, cream, pepper, chili, onion or tartar sauce.' },
+      price: 500, currency: 'RSD', isAvailable: true
     },
     {
       id: 's12', categoryId: 'cat_sendvici',
@@ -186,10 +204,28 @@ export const INITIAL_DATA: MenuState = {
       price: 440, currency: 'RSD', isAvailable: true
     },
     {
-      id: 'sp2', categoryId: 'cat_palacinke_slane',
-      name: { sr: 'Slana palačinka', en: 'Savory Crepe' },
+      id: 'sp2a', categoryId: 'cat_palacinke_slane',
+      name: { sr: 'Slana palačinka - Šunka', en: 'Savory Crepe - Ham' },
       description: { sr: 'Sir gauda, šunka, pavlaka, kečap, majonez.', en: 'Gouda, ham, cream, ketchup, mayo.' },
       price: 350, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sp2b', categoryId: 'cat_palacinke_slane',
+      name: { sr: 'Slana palačinka - Kulen', en: 'Savory Crepe - Kulen' },
+      description: { sr: 'Sir gauda, kulen, pavlaka, kečap, majonez.', en: 'Gouda, kulen sausage, cream, ketchup, mayo.' },
+      price: 380, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sp2c', categoryId: 'cat_palacinke_slane',
+      name: { sr: 'Slana palačinka - Svinjska pršuta', en: 'Savory Crepe - Pork Prosciutto' },
+      description: { sr: 'Sir gauda, svinjska pršuta, pavlaka, kečap, majonez.', en: 'Gouda, pork prosciutto, cream, ketchup, mayo.' },
+      price: 410, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'sp2d', categoryId: 'cat_palacinke_slane',
+      name: { sr: 'Slana palačinka - Govedja pršuta', en: 'Savory Crepe - Beef Prosciutto' },
+      description: { sr: 'Sir gauda, govedja pršuta, pavlaka, kečap, majonez.', en: 'Gouda, beef prosciutto, cream, ketchup, mayo.' },
+      price: 440, currency: 'RSD', isAvailable: true
     },
     {
       id: 'sp3', categoryId: 'cat_palacinke_slane',
@@ -242,15 +278,39 @@ export const INITIAL_DATA: MenuState = {
       price: 630, currency: 'RSD', isAvailable: true
     },
 
-    // PILETINA
+    // JELA OD MESA
     {
-      id: 'pi1', categoryId: 'cat_piletina',
+      id: 'me1', categoryId: 'cat_meso',
+      name: { sr: 'Svinjski vrat sa povrćem i suvim šljivama (oko 250gr)', en: 'Pork Neck with Vegetables and Dried Plums (approx 250g)' },
+      description: { sr: 'Kvalitetan marinirani odrezak mesa, povrće sa suvim šljivama, Toscana sos (ajvar, kisela pavlaka, začini), aromatizovani krompir.', en: 'Quality marinated pork steak, vegetables with dried plums, Toscana sauce (ajvar, sour cream, spices), seasoned potatoes.' },
+      price: 870, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'me2', categoryId: 'cat_meso',
+      name: { sr: 'Piletina sa grilovanim povrćem (oko 250gr)', en: 'Chicken with Grilled Vegetables (approx 250g)' },
+      description: { sr: 'Marinirani pileći file, grilovano povrće, pesto sos.', en: 'Marinated chicken fillet, grilled vegetables, pesto sauce.' },
+      price: 730, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'me3', categoryId: 'cat_meso',
+      name: { sr: 'Piletina sa parmezanom (oko 250gr)', en: 'Chicken with Parmesan (approx 250g)' },
+      description: { sr: 'Marinirani pileći file u sosu (neutralna pavlaka, soja sos, senf, začini), parmezan. Prilog pirinač.', en: 'Marinated chicken fillet in sauce (heavy cream, soy sauce, mustard, spices), parmesan. Served with rice.' },
+      price: 750, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'me4', categoryId: 'cat_meso',
+      name: { sr: 'Piletina u šampinjon sosu (oko 250gr)', en: 'Chicken in Mushroom Sauce (approx 250g)' },
+      description: { sr: 'Marinirani pileći file, šampinjon sos (šampinjoni, crveni luk, šargarepa, senf, neutralna pavlaka, parmezan, začini). Prilog pirinač.', en: 'Marinated chicken fillet, mushroom sauce (mushrooms, red onion, carrot, mustard, heavy cream, parmesan, spices). Served with rice.' },
+      price: 750, currency: 'RSD', isAvailable: true
+    },
+    {
+      id: 'me5', categoryId: 'cat_meso',
       name: { sr: 'Chicken Nuggets - Pileći štapići', en: 'Chicken Nuggets - Chicken Strips' },
       description: { sr: 'Pileći file, pomfrit, tartar sos.', en: 'Chicken fillet, fries, tartar sauce.' },
       price: 560, currency: 'RSD', isAvailable: true
     },
     {
-      id: 'pi2', categoryId: 'cat_piletina',
+      id: 'me6', categoryId: 'cat_meso',
       name: { sr: 'Dimljeni pileći batak (Bez koske)', en: 'Smoked Chicken Drumstick (Boneless)' },
       description: { sr: 'Dim. batak, aromatizovani krompir, marinirani crveni luk, garlic majonez sos, Toskana ljuti sos.', en: 'Smoked drumstick, seasoned potatoes, marinated red onion, garlic mayo, Toscana hot sauce.' },
       price: 670, currency: 'RSD', isAvailable: true
@@ -288,91 +348,105 @@ export const INITIAL_DATA: MenuState = {
       name: { sr: 'Margherita', en: 'Margherita' },
       description: { sr: 'Pelat, gauda, masline, origano.', en: 'Tomato sauce, gouda, olives, oregano.' },
       price: 460, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['460 / 610 / 1400 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['460 / 610 / 1400 RSD'], en: ['460 / 610 / 1400 RSD'] }
     },
     {
       id: 'p2', categoryId: 'cat_pizza',
       name: { sr: 'Capricciosa', en: 'Capricciosa' },
       description: { sr: 'Pelat, gauda, šunka, pečurke, masline, origano.', en: 'Tomato sauce, gouda, ham, mushrooms, olives, oregano.' },
       price: 500, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['500 / 660 / 1450 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['500 / 660 / 1450 RSD'], en: ['500 / 660 / 1450 RSD'] }
     },
     {
       id: 'p3', categoryId: 'cat_pizza',
       name: { sr: 'Pepperoni', en: 'Pepperoni' },
       description: { sr: 'Pelat, gauda, kulen, ljuta papričica, masline, origano.', en: 'Tomato sauce, gouda, spicy salami, hot pepper, olives, oregano.' },
       price: 570, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['570 / 760 / 1650 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['570 / 760 / 1650 RSD'], en: ['570 / 760 / 1650 RSD'] }
     },
     {
       id: 'p4', categoryId: 'cat_pizza',
       name: { sr: 'Amore Mio', en: 'Amore Mio' },
       description: { sr: 'Pelat, gauda, kulen, slanina, crveni luk, parmezan, rukola, masline, cherry, origano.', en: 'Tomato sauce, gouda, spicy salami, bacon, red onion, parmesan, arugula, olives, cherry tomato, oregano.' },
       price: 710, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['710 / 920 / 1700 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['710 / 920 / 1700 RSD'], en: ['710 / 920 / 1700 RSD'] }
     },
     {
       id: 'p5', categoryId: 'cat_pizza',
       name: { sr: 'Toscana', en: 'Toscana' },
       description: { sr: 'Pelat, gauda, šunka, goveđa pršuta, svinjska pršuta, kulen, slanina, rukola, pečurke, masline, parmezan, cherry, origano.', en: 'Tomato sauce, gouda, ham, beef prosciutto, pork prosciutto, spicy salami, bacon, arugula, mushrooms, olives, parmesan, cherry tomato, oregano.' },
       price: 710, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['710 / 990 / 1750 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['710 / 990 / 1750 RSD'], en: ['710 / 990 / 1750 RSD'] }
     },
     {
       id: 'p6', categoryId: 'cat_pizza',
       name: { sr: 'Tonno', en: 'Tonno' },
       description: { sr: 'Pelat, posni sir, tuna u komadu, paprika, crveni luk, kukuruz šećerac, masline, rukola, origano.', en: 'Tomato sauce, vegan cheese, tuna chunks, pepper, red onion, sweet corn, olives, arugula, oregano.' },
       price: 660, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['660 / 890 / 1680 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['660 / 890 / 1680 RSD'], en: ['660 / 890 / 1680 RSD'] }
     },
     {
       id: 'p7', categoryId: 'cat_pizza',
       name: { sr: 'Vegetariana', en: 'Vegetariana' },
       description: { sr: 'Pelat, posni sir, sveži bosiljak, origano, paprika, crveni luk, tikvice, šećerac, pečurke.', en: 'Tomato sauce, vegan cheese, fresh basil, oregano, pepper, red onion, zucchini, sweet corn, mushrooms.' },
       price: 510, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['510 / 700 / 1580 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['510 / 700 / 1580 RSD'], en: ['510 / 700 / 1580 RSD'] }
     },
     {
       id: 'p8', categoryId: 'cat_pizza',
       name: { sr: 'Calcone Farcito', en: 'Calcone Farcito' },
       description: { sr: 'Pelat, gauda, pavlaka, šunka, pečurke, masline, origano.', en: 'Tomato sauce, gouda, cream, ham, mushrooms, olives, oregano.' },
       price: 550, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['550 / 750 RSD'], en: ['Small / Large'] }
+      tags: { sr: ['550 / 750 RSD'], en: ['550 / 750 RSD'] }
     },
     {
       id: 'p9', categoryId: 'cat_pizza',
       name: { sr: 'Proscuito e Funghi', en: 'Proscuito e Funghi' },
       description: { sr: 'Pelat, gauda, goveđa pršuta, pečurke, masline, origano.', en: 'Tomato sauce, gouda, beef prosciutto, mushrooms, olives, oregano.' },
       price: 730, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['730 / 1020 / 1850 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['730 / 1020 / 1850 RSD'], en: ['730 / 1020 / 1850 RSD'] }
     },
     {
       id: 'p10', categoryId: 'cat_pizza',
       name: { sr: 'Bianca', en: 'Bianca' },
       description: { sr: 'Neutralna pavlaka, krem sir, gauda, konfit belog luka, orasi, masline, rukola.', en: 'Heavy cream, cream cheese, gouda, garlic confit, walnuts, olives, arugula.' },
       price: 510, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['510 / 690 / 1600 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['510 / 690 / 1600 RSD'], en: ['510 / 690 / 1600 RSD'] }
     },
     {
       id: 'p11', categoryId: 'cat_pizza',
       name: { sr: 'Con Pollo', en: 'Con Pollo' },
       description: { sr: 'Pelat, gauda, piletina, cherry, masline.', en: 'Tomato sauce, gouda, chicken, cherry tomato, olives.' },
       price: 580, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['580 / 780 / 1650 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['580 / 780 / 1650 RSD'], en: ['580 / 780 / 1650 RSD'] }
+    },
+    {
+      id: 'p11b', categoryId: 'cat_pizza',
+      name: { sr: 'Prugna', en: 'Prugna' },
+      description: { sr: 'Pelat, gauda, gorgonzola, panceta, suve šljive, origano.', en: 'Tomato sauce, gouda, gorgonzola, pancetta, dried plums, oregano.' },
+      price: 630, currency: 'RSD', isAvailable: true,
+      tags: { sr: ['630 / 820 / 1700 RSD'], en: ['630 / 820 / 1700 RSD'] }
     },
     {
       id: 'p12', categoryId: 'cat_pizza',
       name: { sr: 'Quattro Formaggi', en: 'Quattro Formaggi' },
       description: { sr: '(4 VRSTE SIRA) Pelat, sir gauda, sir gorgonzola, krem sir, dimljeni sir, parmezan, rukola, masline.', en: '(4 CHEESE) Tomato sauce, gouda, gorgonzola, cream cheese, smoked cheese, parmesan, arugula, olives.' },
       price: 610, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['610 / 820 / 1700 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['610 / 820 / 1700 RSD'], en: ['610 / 820 / 1700 RSD'] }
+    },
+    {
+      id: 'p12b', categoryId: 'cat_pizza',
+      name: { sr: 'Pistacio Mortadela', en: 'Pistachio Mortadella' },
+      description: { sr: 'Krem sir, gauda, neutralna pavlaka, mortadela, krema od pistaca, lomljeni pistaci, čeri, origano.', en: 'Cream cheese, gouda, heavy cream, mortadella, pistachio cream, crushed pistachios, cherry tomato, oregano.' },
+      price: 730, currency: 'RSD', isAvailable: true,
+      tags: { sr: ['730 / 1020 / 1800 RSD'], en: ['730 / 1020 / 1800 RSD'] }
     },
     {
       id: 'p13', categoryId: 'cat_pizza',
       name: { sr: 'Salsiccia', en: 'Salsiccia' },
       description: { sr: 'Pelat, gauda, kobasica, mladi luk, crveni luk, masline, origano.', en: 'Tomato sauce, gouda, sausage, spring onion, red onion, olives, oregano.' },
       price: 690, currency: 'RSD', isAvailable: true,
-      tags: { sr: ['690 / 960 / 1730 RSD'], en: ['Small / Large / Family'] }
+      tags: { sr: ['690 / 960 / 1730 RSD'], en: ['690 / 960 / 1730 RSD'] }
     },
     {
       id: 'p14', categoryId: 'cat_pizza',
@@ -410,13 +484,13 @@ export const INITIAL_DATA: MenuState = {
       id: 'sl5', categoryId: 'cat_salate',
       name: { sr: 'Paradajz', en: 'Tomato' },
       description: { sr: 'Svež paradajz.', en: 'Fresh tomato.' },
-      price: 250, currency: 'RSD', isAvailable: true
+      price: 290, currency: 'RSD', isAvailable: true
     },
     {
       id: 'sl6', categoryId: 'cat_salate',
       name: { sr: 'Krastavac', en: 'Cucumber' },
       description: { sr: 'Svež krastavac.', en: 'Fresh cucumber.' },
-      price: 250, currency: 'RSD', isAvailable: true
+      price: 290, currency: 'RSD', isAvailable: true
     },
 
     // PASTE
@@ -519,6 +593,7 @@ export const INITIAL_DATA: MenuState = {
     { id: 'sw10', categoryId: 'cat_slatko', name: { sr: 'Palačinka Pomorandža', en: 'Orange Crepe' }, description: { sr: 'Nutella, vanila krem, pomorandža, ananas.', en: 'Nutella, vanilla cream, orange, pineapple.' }, price: 350, currency: 'RSD', isAvailable: true },
     { id: 'sw11', categoryId: 'cat_slatko', name: { sr: 'Palačinka Višnja', en: 'Sour Cherry Crepe' }, description: { sr: 'Nutella, vanila krem, višnja.', en: 'Nutella, vanilla cream, sour cherry.' }, price: 370, currency: 'RSD', isAvailable: true },
     { id: 'sw12', categoryId: 'cat_slatko', name: { sr: 'Palačinka Šumsko voće', en: 'Forest Fruit Crepe' }, description: { sr: 'Nutella, vanila krem, šumsko voće.', en: 'Nutella, vanilla cream, forest fruit.' }, price: 360, currency: 'RSD', isAvailable: true },
+    { id: 'sw12b', categoryId: 'cat_slatko', name: { sr: 'Palačinka Nutela - Pistači', en: 'Nutella Pistachio Crepe' }, description: { sr: 'Nutela, vanila krem, pistaci.', en: 'Nutella, vanilla cream, pistachios.' }, price: 350, currency: 'RSD', isAvailable: true },
     { id: 'sw13', categoryId: 'cat_slatko', name: { sr: 'Knedle (porcija 3 kom)', en: 'Dumplings (3 pcs portion)' }, description: { sr: 'Šljive, nutela, maline.', en: 'Plums, nutella, raspberries.' }, price: 390, currency: 'RSD', isAvailable: true },
     { id: 'sw14', categoryId: 'cat_slatko', name: { sr: 'Galete', en: 'Waffles/Galettes' }, description: { sr: 'Tradicionalne galete.', en: 'Traditional galettes.' }, price: 250, currency: 'RSD', isAvailable: true },
 
@@ -532,18 +607,18 @@ export const INITIAL_DATA: MenuState = {
     { id: 'k7', categoryId: 'cat_kupovi', name: { sr: 'Sladoled teglica', en: 'Ice Cream Jar' }, description: { sr: 'Metropoli Premium sladoled.', en: 'Metropoli Premium ice cream.' }, price: 450, currency: 'RSD', isAvailable: true },
 
     // TOPLI I HLADNI NAPICI (cat_hot_drinks)
-    { id: 'cd1', categoryId: 'cat_hot_drinks', name: { sr: 'Coffe La Toscana', en: 'Coffee La Toscana' }, description: { sr: 'Toping, espresso, mleko.', en: 'Topping, espresso, milk.' }, price: 180, currency: 'RSD', isAvailable: true },
+    { id: 'cd1', categoryId: 'cat_hot_drinks', name: { sr: 'Coffe La Toscana', en: 'Coffee La Toscana' }, description: { sr: 'Toping, espresso, mleko.', en: 'Topping, espresso, milk.' }, price: 190, currency: 'RSD', isAvailable: true },
     { id: 'cd2', categoryId: 'cat_hot_drinks', name: { sr: 'Irish Coffe', en: 'Irish Coffee' }, description: { sr: 'Espresso, whiskey, slatka pavlaka, mleko.', en: 'Espresso, whiskey, sweet cream, milk.' }, price: 370, currency: 'RSD', isAvailable: true },
     { id: 'cd3', categoryId: 'cat_hot_drinks', name: { sr: 'Messciano', en: 'Messciano' }, description: { sr: 'Tequila, kalua, espresso, slatka pavlaka.', en: 'Tequila, kahlua, espresso, sweet cream.' }, price: 440, currency: 'RSD', isAvailable: true },
     { id: 'cd4', categoryId: 'cat_hot_drinks', name: { sr: 'Espresso Martini', en: 'Espresso Martini' }, description: { sr: 'Kalua, vodka, espresso.', en: 'Kahlua, vodka, espresso.' }, price: 320, currency: 'RSD', isAvailable: true },
     { id: 'cd5', categoryId: 'cat_hot_drinks', name: { sr: 'Coffee Latte', en: 'Coffee Latte' }, description: { sr: 'Espresso, pena, mleko.', en: 'Espresso, foam, milk.' }, price: 190, currency: 'RSD', isAvailable: true },
     { id: 'cd6', categoryId: 'cat_hot_drinks', name: { sr: 'Capuccino', en: 'Cappuccino' }, description: { sr: 'Kapućino.', en: 'Cappuccino.' }, price: 180, currency: 'RSD', isAvailable: true },
-    { id: 'cd7', categoryId: 'cat_hot_drinks', name: { sr: 'Espresso', en: 'Espresso' }, description: { sr: 'Espresso kafa.', en: 'Espresso coffee.' }, price: 160, currency: 'RSD', isAvailable: true },
-    { id: 'cd8', categoryId: 'cat_hot_drinks', name: { sr: 'Nescafe', en: 'Nescafe' }, description: { sr: 'Nes kafa.', en: 'Nescafe.' }, price: 180, currency: 'RSD', isAvailable: true },
+    { id: 'cd7', categoryId: 'cat_hot_drinks', name: { sr: 'Espresso', en: 'Espresso' }, description: { sr: 'Espresso kafa.', en: 'Espresso coffee.' }, price: 170, currency: 'RSD', isAvailable: true },
+    { id: 'cd8', categoryId: 'cat_hot_drinks', name: { sr: 'Nescafe', en: 'Nescafe' }, description: { sr: 'Nes kafa.', en: 'Nescafe.' }, price: 190, currency: 'RSD', isAvailable: true },
     { id: 'cd9', categoryId: 'cat_hot_drinks', name: { sr: 'Frape al coffee', en: 'Coffee Frappe' }, description: { sr: 'Hladna kafa sa frapeom.', en: 'Cold coffee frappe.' }, price: 250, currency: 'RSD', isAvailable: true },
     { id: 'cd10', categoryId: 'cat_hot_drinks', name: { sr: 'Ice coffee', en: 'Ice Coffee' }, description: { sr: 'Ledena kafa.', en: 'Ice coffee.' }, price: 270, currency: 'RSD', isAvailable: true },
     { id: 'cd11', categoryId: 'cat_hot_drinks', name: { sr: 'Plazma shake', en: 'Plazma Shake' }, description: { sr: 'Šejk sa plazmom.', en: 'Plazma shake.' }, price: 270, currency: 'RSD', isAvailable: true },
-    { id: 'cd12', categoryId: 'cat_hot_drinks', name: { sr: 'Nes 3 u 1', en: 'Nes 3in1' }, description: { sr: 'Nescafe 3 u 1.', en: 'Nescafe 3in1.' }, price: 120, currency: 'RSD', isAvailable: true },
+    { id: 'cd12', categoryId: 'cat_hot_drinks', name: { sr: 'Nes 3 u 1', en: 'Nes 3in1' }, description: { sr: 'Nescafe 3 u 1.', en: 'Nescafe 3in1.' }, price: 130, currency: 'RSD', isAvailable: true },
     { id: 'cd13', categoryId: 'cat_hot_drinks', name: { sr: 'Nesquik', en: 'Nesquik' }, description: { sr: 'Čokoladni napitak.', en: 'Chocolate drink.' }, price: 200, currency: 'RSD', isAvailable: true },
     { id: 'cd14', categoryId: 'cat_hot_drinks', name: { sr: 'Topla čokolada', en: 'Hot Chocolate' }, description: { sr: 'Topla čokolada.', en: 'Hot chocolate.' }, price: 200, currency: 'RSD', isAvailable: true },
     { id: 'cd15', categoryId: 'cat_hot_drinks', name: { sr: 'Kafa', en: 'Domestic Coffee' }, description: { sr: 'Domaća kafa.', en: 'Domestic coffee.' }, price: 120, currency: 'RSD', isAvailable: true },
@@ -555,13 +630,15 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cd_med', categoryId: 'cat_hot_drinks', name: { sr: 'Dodatak - Med', en: 'Add-on - Honey' }, description: { sr: 'Dodatna porcija meda.', en: 'Extra serving of honey.' }, price: 50, currency: 'RSD', isAvailable: true },
 
     // VODE (cat_water)
-    { id: 'w1', categoryId: 'cat_water', name: { sr: 'Rosa (negazirana) 0.33', en: 'Rosa (still) 0.33' }, description: { sr: 'Voda 0.33l.', en: 'Water 0.33l.' }, price: 160, currency: 'RSD', isAvailable: true },
-    { id: 'w2', categoryId: 'cat_water', name: { sr: 'Rosa (gazirana) 0.33', en: 'Rosa (sparkling) 0.33' }, description: { sr: 'Voda 0.33l.', en: 'Water 0.33l.' }, price: 160, currency: 'RSD', isAvailable: true },
+    { id: 'w0', categoryId: 'cat_water', name: { sr: 'Römerquelle - Lemon Grass 0.33', en: 'Römerquelle - Lemon Grass 0.33' }, description: { sr: 'Aromatizovana voda 0.33l.', en: 'Flavoured water 0.33l.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'w1', categoryId: 'cat_water', name: { sr: 'Rosa (negazirana) 0.33', en: 'Rosa (still) 0.33' }, description: { sr: 'Voda 0.33l.', en: 'Water 0.33l.' }, price: 170, currency: 'RSD', isAvailable: true },
+    { id: 'w2', categoryId: 'cat_water', name: { sr: 'Rosa (gazirana) 0.33', en: 'Rosa (sparkling) 0.33' }, description: { sr: 'Voda 0.33l.', en: 'Water 0.33l.' }, price: 170, currency: 'RSD', isAvailable: true },
     { id: 'w3', categoryId: 'cat_water', name: { sr: 'Knjaz Miloš 0.1', en: 'Knjaz Milos 0.1' }, description: { sr: 'Gazirana voda.', en: 'Sparkling water.' }, price: 40, currency: 'RSD', isAvailable: true },
     { id: 'w4', categoryId: 'cat_water', name: { sr: 'Knjaz Miloš 0.2', en: 'Knjaz Milos 0.2' }, description: { sr: 'Gazirana voda.', en: 'Sparkling water.' }, price: 80, currency: 'RSD', isAvailable: true },
     { id: 'w5', categoryId: 'cat_water', name: { sr: 'Knjaz Miloš 1L', en: 'Knjaz Milos 1L' }, description: { sr: 'Gazirana voda.', en: 'Sparkling water.' }, price: 400, currency: 'RSD', isAvailable: true },
-    { id: 'w6', categoryId: 'cat_water', name: { sr: 'Rosa (negazirana) 0.75', en: 'Rosa (still) 0.75' }, description: { sr: 'Voda 0.75l.', en: 'Water 0.75l.' }, price: 260, currency: 'RSD', isAvailable: true },
-    { id: 'w7', categoryId: 'cat_water', name: { sr: 'Rosa (gazirana) 0.75', en: 'Rosa (sparkling) 0.75' }, description: { sr: 'Voda 0.75l.', en: 'Water 0.75l.' }, price: 260, currency: 'RSD', isAvailable: true },
+    { id: 'w6', categoryId: 'cat_water', name: { sr: 'Rosa (negazirana) 0.75', en: 'Rosa (still) 0.75' }, description: { sr: 'Voda 0.75l.', en: 'Water 0.75l.' }, price: 270, currency: 'RSD', isAvailable: true },
+    { id: 'w7', categoryId: 'cat_water', name: { sr: 'Rosa (gazirana) 0.75', en: 'Rosa (sparkling) 0.75' }, description: { sr: 'Voda 0.75l.', en: 'Water 0.75l.' }, price: 270, currency: 'RSD', isAvailable: true },
+    { id: 'w8', categoryId: 'cat_water', name: { sr: 'Voda sa nanom 0.33', en: 'Mint Water 0.33' }, description: { sr: 'Voda sa nanom 0.33l.', en: 'Mint water 0.33l.' }, price: 200, currency: 'RSD', isAvailable: true },
 
     // BEZALKOHOLNA DRINKS (Gazirana)
     { id: 'sdg1', categoryId: 'cat_soft_drinks_gaz', name: { sr: 'Red Bull 0.25', en: 'Red Bull 0.25' }, description: { sr: 'Energetsko piće.', en: 'Energy drink.' }, price: 350, currency: 'RSD', isAvailable: true },
@@ -585,14 +662,11 @@ export const INITIAL_DATA: MenuState = {
     { id: 'sdn7', categoryId: 'cat_soft_drinks_neg', name: { sr: 'Next sokovi 0.20', en: 'Next Juices 0.20' }, description: { sr: 'Borovnica, Jabuka, Breskva, Jagoda, Đus.', en: 'Blueberry, Apple, Peach, Strawberry, Orange.' }, price: 220, currency: 'RSD', isAvailable: true },
 
     // PIVA (Dopunjena iz slika)
-    { id: 'beer1', categoryId: 'cat_pivo', name: { sr: 'Guinness 0.33', en: 'Guinness 0.33' }, description: { sr: 'Tamno pivo.', en: 'Stout.' }, currency: 'RSD', isAvailable: true },
-    { id: 'beer2', categoryId: 'cat_pivo', name: { sr: 'San Miguel 0.33', en: 'San Miguel 0.33' }, description: { sr: 'Lager pivo.', en: 'Lager.' }, currency: 'RSD', isAvailable: true },
-    { id: 'beer3', categoryId: 'cat_pivo', name: { sr: 'Erdinger (pšenično) 0.33', en: 'Erdinger (wheat) 0.33' }, description: { sr: 'Pšenično pivo.', en: 'Wheat beer.' }, price: 370, currency: 'RSD', isAvailable: true },
+    { id: 'beer3', categoryId: 'cat_pivo', name: { sr: 'Erdinger (pšenično) 0.33', en: 'Erdinger (wheat) 0.33' }, description: { sr: 'Pšenično pivo.', en: 'Wheat beer.' }, price: 390, currency: 'RSD', isAvailable: true },
     { id: 'beer4', categoryId: 'cat_pivo', name: { sr: 'Kronenbourg (pšenično) 0.33', en: 'Kronenbourg (wheat) 0.33' }, description: { sr: 'Pšenično pivo.', en: 'Wheat beer.' }, price: 270, currency: 'RSD', isAvailable: true },
     { id: 'beer5', categoryId: 'cat_pivo', name: { sr: 'Carlsberg 0.25', en: 'Carlsberg 0.25' }, description: { sr: 'Lager pivo.', en: 'Lager.' }, price: 250, currency: 'RSD', isAvailable: true },
     { id: 'beer6', categoryId: 'cat_pivo', name: { sr: 'Tuborg 0.33', en: 'Tuborg 0.33' }, description: { sr: 'Lager pivo.', en: 'Lager.' }, price: 240, currency: 'RSD', isAvailable: true },
     { id: 'beer_tuborg_050', categoryId: 'cat_pivo', name: { sr: 'Tuborg 0.50', en: 'Tuborg 0.50' }, description: { sr: 'Lager pivo.', en: 'Lager.' }, currency: 'RSD', isAvailable: true },
-    { id: 'beer_lav_twist', categoryId: 'cat_pivo', name: { sr: 'Lav twist 0.33', en: 'Lav twist 0.33' }, description: { sr: 'Voćni lager.', en: 'Fruit lager.' }, currency: 'RSD', isAvailable: true },
     { id: 'beer7', categoryId: 'cat_pivo', name: { sr: 'Somersby 0.33', en: 'Somersby 0.33' }, description: { sr: 'Jabuka, Kruška, Kupina.', en: 'Apple, Pear, Blackberry.' }, price: 300, currency: 'RSD', isAvailable: true },
     { id: 'beer8', categoryId: 'cat_pivo', name: { sr: 'Lav premium 0.33', en: 'Lav premium 0.33' }, description: { sr: 'Lager pivo.', en: 'Lager.' }, price: 200, currency: 'RSD', isAvailable: true },
     { id: 'beer9', categoryId: 'cat_pivo', name: { sr: 'Budweiser 0.33', en: 'Budweiser 0.33' }, description: { sr: 'Lager pivo.', en: 'Lager.' }, price: 280, currency: 'RSD', isAvailable: true },
@@ -614,26 +688,26 @@ export const INITIAL_DATA: MenuState = {
     { id: 'wine7', categoryId: 'cat_wine', name: { sr: 'Špricera 0.2', en: 'Spricer 0.2' }, description: { sr: 'Vino i kisela voda.', en: 'Wine and sparkling water.' }, price: 140, currency: 'RSD', isAvailable: true },
 
     // VINA - BUTELJKE
-    { id: 'wine_b1', categoryId: 'cat_wine', name: { sr: 'Vinarija Jokić organik vina Pošip 0.75', en: 'Vinarija Jokic Pošip 0.75' }, description: { sr: 'Belo vino.', en: 'White wine.' }, price: 3100, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b2', categoryId: 'cat_wine', name: { sr: 'Vinarija Jokić organik vina Maraština 0.75', en: 'Vinarija Jokic Maraština 0.75' }, description: { sr: 'Belo vino.', en: 'White wine.' }, price: 2700, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b3', categoryId: 'cat_wine', name: { sr: 'Radovanović Kabernet 0.75', en: 'Radovanovic Cabernet 0.75' }, description: { sr: 'Crno vino.', en: 'Red wine.' }, price: 2700, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b4', categoryId: 'cat_wine', name: { sr: 'Radovanović Chardonay 0.75', en: 'Radovanovic Chardonnay 0.75' }, description: { sr: 'Belo vino.', en: 'White wine.' }, price: 2700, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b5', categoryId: 'cat_wine', name: { sr: 'Kovačević Aurelius 0.75', en: 'Kovacevic Aurelius 0.75' }, description: { sr: 'Crno vino.', en: 'Red wine.' }, price: 2800, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b6', categoryId: 'cat_wine', name: { sr: 'Kovačević Chardonay 0.75', en: 'Kovacevic Chardonnay 0.75' }, description: { sr: 'Belo vino.', en: 'White wine.' }, price: 2800, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b7', categoryId: 'cat_wine', name: { sr: 'Kovačević Roseto 0.75', en: 'Kovacevic Roseto 0.75' }, description: { sr: 'Roze vino.', en: 'Rose wine.' }, price: 2500, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b8', categoryId: 'cat_wine', name: { sr: 'Aleksandrović Regent 0.75', en: 'Aleksandrovic Regent 0.75' }, description: { sr: 'Crno vino.', en: 'Red wine.' }, price: 3900, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b9', categoryId: 'cat_wine', name: { sr: 'Aleksandrović Harizma 0.75', en: 'Aleksandrovic Harizma 0.75' }, description: { sr: 'Belo vino.', en: 'White wine.' }, price: 2900, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b10', categoryId: 'cat_wine', name: { sr: 'Aleksandrović Varijanta 0.75', en: 'Aleksandrovic Varijanta 0.75' }, description: { sr: 'Roze vino.', en: 'Rose wine.' }, price: 2500, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b11', categoryId: 'cat_wine', name: { sr: 'Drašković Muskat 0.75', en: 'Draskovic Muskat 0.75' }, description: { sr: 'Belo vino.', en: 'White wine.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b12', categoryId: 'cat_wine', name: { sr: 'Drašković Burgundac 0.75', en: 'Draskovic Burgundac 0.75' }, description: { sr: 'Crno vino.', en: 'Red wine.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b13', categoryId: 'cat_wine', name: { sr: 'Drašković Rose 0.75', en: 'Draskovic Rose 0.75' }, description: { sr: 'Roze vino.', en: 'Rose wine.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
-    { id: 'wine_b14', categoryId: 'cat_wine', name: { sr: 'Drašković Frankovka 0.75', en: 'Draskovic Frankovka 0.75' }, description: { sr: 'Crno vino.', en: 'Red wine.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b2b', categoryId: 'cat_wine', name: { sr: 'Vinarija Aleksić Žuti Cvet - Belo 0.75', en: 'Vinarija Aleksic Zuti Cvet - White 0.75' }, description: { sr: 'Belo vino.', en: 'White wine.' }, price: 2500, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b3', categoryId: 'cat_wine', name: { sr: 'Radovanović Kabernet 0.75', en: 'Radovanovic Cabernet 0.75' }, description: { sr: 'Crno.', en: 'Red.' }, price: 2700, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b4', categoryId: 'cat_wine', name: { sr: 'Radovanović Chardonay 0.75', en: 'Radovanovic Chardonnay 0.75' }, description: { sr: 'Belo.', en: 'White.' }, price: 2700, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b5', categoryId: 'cat_wine', name: { sr: 'Kovačević Aurelius 0.75', en: 'Kovacevic Aurelius 0.75' }, description: { sr: 'Crno.', en: 'Red.' }, price: 2800, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b6', categoryId: 'cat_wine', name: { sr: 'Kovačević Chardonay 0.75', en: 'Kovacevic Chardonnay 0.75' }, description: { sr: 'Belo.', en: 'White.' }, price: 2800, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b7', categoryId: 'cat_wine', name: { sr: 'Kovačević Roseto 0.75', en: 'Kovacevic Roseto 0.75' }, description: { sr: 'Roze.', en: 'Rose.' }, price: 2500, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b8', categoryId: 'cat_wine', name: { sr: 'Aleksandrović Regent 0.75', en: 'Aleksandrovic Regent 0.75' }, description: { sr: 'Crno.', en: 'Red.' }, price: 3900, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b9', categoryId: 'cat_wine', name: { sr: 'Aleksandrović Harizma 0.75', en: 'Aleksandrovic Harizma 0.75' }, description: { sr: 'Belo.', en: 'White.' }, price: 2900, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b10', categoryId: 'cat_wine', name: { sr: 'Aleksandrović Varijanta 0.75', en: 'Aleksandrovic Varijanta 0.75' }, description: { sr: 'Roze.', en: 'Rose.' }, price: 2500, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b11', categoryId: 'cat_wine', name: { sr: 'Drašković Muskat 0.75', en: 'Draskovic Muskat 0.75' }, description: { sr: 'Belo.', en: 'White.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b12', categoryId: 'cat_wine', name: { sr: 'Drašković Burgundac 0.75', en: 'Draskovic Burgundac 0.75' }, description: { sr: 'Belo.', en: 'White.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b13', categoryId: 'cat_wine', name: { sr: 'Drašković Rose 0.75', en: 'Draskovic Rose 0.75' }, description: { sr: 'Roze.', en: 'Rose.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
+    { id: 'wine_b14', categoryId: 'cat_wine', name: { sr: 'Drašković Frankovka 0.75', en: 'Draskovic Frankovka 0.75' }, description: { sr: 'Crno.', en: 'Red.' }, price: 2300, currency: 'RSD', isAvailable: true, tags: { sr: ['Buteljka'], en: ['Bottle'] } },
 
     // VINA - FLAŠICE
-    { id: 'wine_f1', categoryId: 'cat_wine', name: { sr: 'Vranac CG 0.187', en: 'Vranac CG 0.187' }, description: { sr: 'Crno vino 0.187l.', en: 'Red wine 0.187l.' }, price: 350, currency: 'RSD', isAvailable: true, tags: { sr: ['Flašica'], en: ['Minature'] } },
+    { id: 'wine_f1', categoryId: 'cat_wine', name: { sr: 'Vranac CG 0.187', en: 'Vranac CG 0.187' }, description: { sr: 'Crno.', en: 'Red.' }, price: 350, currency: 'RSD', isAvailable: true, tags: { sr: ['Flašica'], en: ['Minature'] } },
     { id: 'wine_f2', categoryId: 'cat_wine', name: { sr: 'Di Luna Sangria 0.187', en: 'Di Luna Sangria 0.187' }, description: { sr: 'Sangria 0.187l.', en: 'Sangria 0.187l.' }, price: 350, currency: 'RSD', isAvailable: true, tags: { sr: ['Flašica'], en: ['Minature'] } },
-    { id: 'wine_f3', categoryId: 'cat_wine', name: { sr: 'Krstač CG 0.187', en: 'Krstac CG 0.187' }, description: { sr: 'Belo vino 0.187l.', en: 'White wine 0.187l.' }, price: 350, currency: 'RSD', isAvailable: true, tags: { sr: ['Flašica'], en: ['Minature'] } },
+    { id: 'wine_f3', categoryId: 'cat_wine', name: { sr: 'Krstač CG 0.187', en: 'Krstac CG 0.187' }, description: { sr: 'Belo.', en: 'White.' }, price: 350, currency: 'RSD', isAvailable: true, tags: { sr: ['Flašica'], en: ['Minature'] } },
     { id: 'wine_f4', categoryId: 'cat_wine', name: { sr: 'Kovačević (belo, rose, crveno) 0.187', en: 'Kovacevic (white, rose, red) 0.187' }, description: { sr: 'Kvalitetno vino 0.187l.', en: 'Quality wine 0.187l.' }, price: 390, currency: 'RSD', isAvailable: true, tags: { sr: ['Flašica'], en: ['Minature'] } },
+    { id: 'wine_f5', categoryId: 'cat_wine', name: { sr: 'Vinarija Aleksić Žuti Cvet - Belo 0.187', en: 'Vinarija Aleksic Zuti Cvet - White 0.187' }, description: { sr: 'Belo.', en: 'White.' }, price: 370, currency: 'RSD', isAvailable: true, tags: { sr: ['Flašica'], en: ['Minature'] } },
 
     // VINA - ŠAMPANJAC
     { id: 'wine_s1', categoryId: 'cat_wine', name: { sr: 'Dom Perignon 0.75', en: 'Dom Perignon 0.75' }, description: { sr: 'Premium šampanjac.', en: 'Premium champagne.' }, price: 35000, currency: 'RSD', isAvailable: true, tags: { sr: ['Šampanjac'], en: ['Champagne'] } },
@@ -643,27 +717,28 @@ export const INITIAL_DATA: MenuState = {
     // ŽESTOKA DOMAĆA (cat_zestina_domaca)
     { id: 'zd1', categoryId: 'cat_zestina_domaca', name: { sr: 'Viljamovka 0.03', en: 'Viljamovka 0.03' }, description: { sr: 'Kruška.', en: 'Pear rakija.' }, price: 240, currency: 'RSD', isAvailable: true },
     { id: 'zd2', categoryId: 'cat_zestina_domaca', name: { sr: 'Vinjak 5 0.03', en: 'Vinjak 5 0.03' }, description: { sr: 'Domaći konjak.', en: 'Domestic brandy.' }, price: 200, currency: 'RSD', isAvailable: true },
-    { id: 'zd3', categoryId: 'cat_zestina_domaca', name: { sr: 'Vinjak 0.03', en: 'Vinjak 0.03' }, description: { sr: 'Domaći vinjak.', en: 'Domestic brandy.' }, price: 190, currency: 'RSD', isAvailable: true },
-    { id: 'zd4', categoryId: 'cat_zestina_domaca', name: { sr: 'Vodka 0.03', en: 'Vodka 0.03' }, description: { sr: 'Domaća vodka.', en: 'Domestic vodka.' }, price: 190, currency: 'RSD', isAvailable: true },
-    { id: 'zd5', categoryId: 'cat_zestina_domaca', name: { sr: 'Vermut 0.03', en: 'Vermouth 0.03' }, description: { sr: 'Domaći vermut.', en: 'Domestic vermouth.' }, price: 190, currency: 'RSD', isAvailable: true },
-    { id: 'zd6', categoryId: 'cat_zestina_domaca', name: { sr: 'Gorki list 0.03', en: 'Gorki list 0.03' }, description: { sr: 'Biljni liker.', en: 'Herbal liqueur.' }, price: 190, currency: 'RSD', isAvailable: true },
-    { id: 'zd7', categoryId: 'cat_zestina_domaca', name: { sr: 'Loza 0.03', en: 'Loza 0.03' }, description: { sr: 'Rakija od grožđa.', en: 'Grape rakija.' }, price: 190, currency: 'RSD', isAvailable: true },
-    { id: 'zd8', categoryId: 'cat_zestina_domaca', name: { sr: 'Dunjevača 0.03', en: 'Quince Rakija 0.03' }, description: { sr: 'Rakija od dunje.', en: 'Quince rakija.' }, price: 190, currency: 'RSD', isAvailable: true },
-    { id: 'zd9', categoryId: 'cat_zestina_domaca', name: { sr: 'Kajsijevača 0.03', en: 'Apricot Rakija 0.03' }, description: { sr: 'Rakija od kajsije.', en: 'Apricot rakija.' }, price: 190, currency: 'RSD', isAvailable: true },
-    { id: 'zd10', categoryId: 'cat_zestina_domaca', name: { sr: 'Domaća rakija - Zlatna kap 0.03', en: 'Domestic Rakija - Zlatna kap 0.03' }, description: { sr: 'Šljiva.', en: 'Plum rakija.' }, price: 190, currency: 'RSD', isAvailable: true },
+    { id: 'zd3', categoryId: 'cat_zestina_domaca', name: { sr: 'Vinjak 0.03', en: 'Vinjak 0.03' }, description: { sr: 'Domaći vinjak.', en: 'Domestic brandy.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd4', categoryId: 'cat_zestina_domaca', name: { sr: 'Vodka 0.03', en: 'Vodka 0.03' }, description: { sr: 'Domaća vodka.', en: 'Domestic vodka.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd5', categoryId: 'cat_zestina_domaca', name: { sr: 'Vermut 0.03', en: 'Vermouth 0.03' }, description: { sr: 'Domaći vermut.', en: 'Domestic vermouth.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd6', categoryId: 'cat_zestina_domaca', name: { sr: 'Gorki list 0.03', en: 'Gorki list 0.03' }, description: { sr: 'Biljni liker.', en: 'Herbal liqueur.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd7', categoryId: 'cat_zestina_domaca', name: { sr: 'Loza 0.03', en: 'Loza 0.03' }, description: { sr: 'Rakija od grožđa.', en: 'Grape rakija.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd8', categoryId: 'cat_zestina_domaca', name: { sr: 'Dunjevača 0.03', en: 'Quince Rakija 0.03' }, description: { sr: 'Rakija od dunje.', en: 'Quince rakija.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd9', categoryId: 'cat_zestina_domaca', name: { sr: 'Kajsijevača 0.03', en: 'Apricot Rakija 0.03' }, description: { sr: 'Rakija od kajsije.', en: 'Apricot rakija.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd10', categoryId: 'cat_zestina_domaca', name: { sr: 'Domaća rakija - Zlatna kap 0.03', en: 'Domestic Rakija - Zlatna kap 0.03' }, description: { sr: 'Šljiva.', en: 'Plum rakija.' }, price: 200, currency: 'RSD', isAvailable: true },
 
     // ŽESTOKA STRANA (cat_zestina_strana)
     { id: 'zs1', categoryId: 'cat_zestina_strana', name: { sr: 'Absolut Vodka 0.03', en: 'Absolut Vodka 0.03' }, description: { sr: 'Strana vodka.', en: 'Foreign vodka.' }, price: 220, currency: 'RSD', isAvailable: true },
-    { id: 'zs2', categoryId: 'cat_zestina_strana', name: { sr: 'Smirnof Vodka 0.03', en: 'Smirnoff Vodka 0.03' }, description: { sr: 'Strana vodka.', en: 'Foreign vodka.' }, price: 220, currency: 'RSD', isAvailable: true },
+    { id: 'zs2', categoryId: 'cat_zestina_strana', name: { sr: 'Smirnof Vodka 0.03', en: 'Smirnoff Vodka 0.03' }, description: { sr: 'Strana vodka.', en: 'Foreign vodka.' }, price: 230, currency: 'RSD', isAvailable: true },
     { id: 'zs3', categoryId: 'cat_zestina_strana', name: { sr: 'Finlandia Vodka 0.03', en: 'Finlandia Vodka 0.03' }, description: { sr: 'Strana vodka.', en: 'Foreign vodka.' }, price: 220, currency: 'RSD', isAvailable: true },
     { id: 'zs4', categoryId: 'cat_zestina_strana', name: { sr: 'Keglevich Vodka 0.03', en: 'Keglevich Vodka 0.03' }, description: { sr: 'Dinja, Breskva, Jagoda.', en: 'Melon, Peach, Strawberry.' }, price: 220, currency: 'RSD', isAvailable: true },
     { id: 'zs5', categoryId: 'cat_zestina_strana', name: { sr: 'Tequila 0.03', en: 'Tequila 0.03' }, description: { sr: 'Tekila.', en: 'Tequila.' }, price: 240, currency: 'RSD', isAvailable: true },
     { id: 'zs6', categoryId: 'cat_zestina_strana', name: { sr: 'Bakardi 0.03', en: 'Bacardi 0.03' }, description: { sr: 'Rum.', en: 'Rum.' }, price: 250, currency: 'RSD', isAvailable: true },
-    { id: 'zs7', categoryId: 'cat_zestina_strana', name: { sr: 'Jegermeister 0.03', en: 'Jägermeister 0.03' }, description: { sr: 'Biljni liker.', en: 'Herbal liqueur.' }, price: 250, currency: 'RSD', isAvailable: true },
+    { id: 'zs7', categoryId: 'cat_zestina_strana', name: { sr: 'Jegermeister 0.03', en: 'Jägermeister 0.03' }, description: { sr: 'Biljni liker.', en: 'Herbal liqueur.' }, price: 270, currency: 'RSD', isAvailable: true },
     { id: 'zs8', categoryId: 'cat_zestina_strana', name: { sr: 'Campari 0.03', en: 'Campari 0.03' }, description: { sr: 'Aperitiv.', en: 'Aperitif.' }, price: 250, currency: 'RSD', isAvailable: true },
     { id: 'zs9', categoryId: 'cat_zestina_strana', name: { sr: 'Martini 0.03', en: 'Martini 0.03' }, description: { sr: 'Vermut.', en: 'Vermouth.' }, price: 250, currency: 'RSD', isAvailable: true },
-    { id: 'zs10', categoryId: 'cat_zestina_strana', name: { sr: 'Medovača 0.03', en: 'Honey Rakija 0.03' }, description: { sr: 'Rakija sa medom.', en: 'Honey rakija.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'zd11', categoryId: 'cat_zestina_domaca', name: { sr: 'Medovača 0.03', en: 'Honey Rakija 0.03' }, description: { sr: 'Rakija sa medom.', en: 'Honey rakija.' }, price: 200, currency: 'RSD', isAvailable: true },
     { id: 'zs11', categoryId: 'cat_zestina_strana', name: { sr: 'Absinth 0.03', en: 'Absinthe 0.03' }, description: { sr: 'Pelinkovac.', en: 'Absinthe.' }, price: 260, currency: 'RSD', isAvailable: true },
+    { id: 'zs12', categoryId: 'cat_zestina_strana', name: { sr: 'Džin 0.03', en: 'Gin 0.03' }, description: { sr: 'Džin.', en: 'Gin.' }, price: 200, currency: 'RSD', isAvailable: true },
 
     // VISKI & KONJAK (cat_whiskey_konjak)
     { id: 'wk1', categoryId: 'cat_whiskey_konjak', name: { sr: 'Hennessy 0.03', en: 'Hennessy 0.03' }, description: { sr: 'Konjak.', en: 'Cognac.' }, price: 450, currency: 'RSD', isAvailable: true },
@@ -685,8 +760,6 @@ export const INITIAL_DATA: MenuState = {
     { id: 'l4', categoryId: 'cat_likeri', name: { sr: 'Višnja 0.05', en: 'Cherry Liqueur 0.05' }, description: { sr: 'Voćni liker.', en: 'Fruit liqueur.' }, price: 220, currency: 'RSD', isAvailable: true },
 
     // KOKTELI & MEŠANA PIĆA (cat_cocktails)
-    { id: 'ck1', categoryId: 'cat_cocktails', name: { sr: 'Mojito', en: 'Mojito' }, description: { sr: 'Bacardy, nana, limeta, kisela kiselina.', en: 'Bacardi, mint, lime, sparkling water.' }, price: 500, currency: 'RSD', isAvailable: true },
-    { id: 'ck2', categoryId: 'cat_cocktails', name: { sr: 'Long Island', en: 'Long Island' }, description: { sr: 'Bacardy, triple sec, vodka, tequila, gin.', en: 'Bacardi, triple sec, vodka, tequila, gin.' }, price: 520, currency: 'RSD', isAvailable: true },
     { id: 'ck3', categoryId: 'cat_cocktails', name: { sr: 'Sex on the Beach', en: 'Sex on the Beach' }, description: { sr: 'Vodka, archers, đus, grenadin.', en: 'Vodka, archers, orange juice, grenadine.' }, price: 450, currency: 'RSD', isAvailable: true },
     { id: 'ck4', categoryId: 'cat_cocktails', name: { sr: 'Cosmopolitan', en: 'Cosmopolitan' }, description: { sr: 'Vodka, triple sec, borovnica, limun.', en: 'Vodka, triple sec, blueberry, lemon.' }, price: 500, currency: 'RSD', isAvailable: true },
     { id: 'ck5', categoryId: 'cat_cocktails', name: { sr: 'Blue Laguna', en: 'Blue Lagoon' }, description: { sr: 'Vodka, blue curacao, limun, sprite.', en: 'Vodka, blue curacao, lemon, sprite.' }, price: 450, currency: 'RSD', isAvailable: true },
