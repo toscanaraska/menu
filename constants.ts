@@ -629,7 +629,7 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cd_med', categoryId: 'cat_hot_drinks', name: { sr: 'Dodatak - Med', en: 'Add-on - Honey' }, description: { sr: 'Dodatna porcija meda.', en: 'Extra serving of honey.' }, price: 50, currency: 'RSD', isAvailable: true },
 
     // VODE (cat_water)
-    { id: 'w0', categoryId: 'cat_water', name: { sr: 'Römerquelle - Lemon Grass 0.33', en: 'Römerquelle - Lemon Grass 0.33' }, description: { sr: 'Aromatizovana voda 0.33l.', en: 'Flavoured water 0.33l.' }, price: 200, currency: 'RSD', isAvailable: true },
+    { id: 'w0', categoryId: 'cat_water', name: { sr: 'Römerquelle - Voda sa nanom 0.33', en: 'Römerquelle - Mint Water 0.33' }, description: { sr: 'Aromatizovana voda 0.33l.', en: 'Flavoured water 0.33l.' }, price: 200, currency: 'RSD', isAvailable: true },
     { id: 'w1', categoryId: 'cat_water', name: { sr: 'Rosa (negazirana) 0.33', en: 'Rosa (still) 0.33' }, description: { sr: 'Voda 0.33l.', en: 'Water 0.33l.' }, price: 170, currency: 'RSD', isAvailable: true },
     { id: 'w2', categoryId: 'cat_water', name: { sr: 'Rosa (gazirana) 0.33', en: 'Rosa (sparkling) 0.33' }, description: { sr: 'Voda 0.33l.', en: 'Water 0.33l.' }, price: 170, currency: 'RSD', isAvailable: true },
     { id: 'w3', categoryId: 'cat_water', name: { sr: 'Knjaz Miloš 0.1', en: 'Knjaz Milos 0.1' }, description: { sr: 'Gazirana voda.', en: 'Sparkling water.' }, price: 40, currency: 'RSD', isAvailable: true },
@@ -637,7 +637,6 @@ export const INITIAL_DATA: MenuState = {
     { id: 'w5', categoryId: 'cat_water', name: { sr: 'Knjaz Miloš 1L', en: 'Knjaz Milos 1L' }, description: { sr: 'Gazirana voda.', en: 'Sparkling water.' }, price: 400, currency: 'RSD', isAvailable: true },
     { id: 'w6', categoryId: 'cat_water', name: { sr: 'Rosa (negazirana) 0.75', en: 'Rosa (still) 0.75' }, description: { sr: 'Voda 0.75l.', en: 'Water 0.75l.' }, price: 270, currency: 'RSD', isAvailable: true },
     { id: 'w7', categoryId: 'cat_water', name: { sr: 'Rosa (gazirana) 0.75', en: 'Rosa (sparkling) 0.75' }, description: { sr: 'Voda 0.75l.', en: 'Water 0.75l.' }, price: 270, currency: 'RSD', isAvailable: true },
-    { id: 'w8', categoryId: 'cat_water', name: { sr: 'Voda sa nanom 0.33', en: 'Mint Water 0.33' }, description: { sr: 'Voda sa nanom 0.33l.', en: 'Mint water 0.33l.' }, price: 200, currency: 'RSD', isAvailable: true },
 
     // BEZALKOHOLNA DRINKS (Gazirana)
     { id: 'sdg1', categoryId: 'cat_soft_drinks_gaz', name: { sr: 'Red Bull 0.25', en: 'Red Bull 0.25' }, description: { sr: 'Energetsko piće.', en: 'Energy drink.' }, price: 350, currency: 'RSD', isAvailable: true },
