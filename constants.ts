@@ -20,7 +20,6 @@ export const INITIAL_DATA: MenuState = {
     { id: 'cat_sendvici', name: { sr: 'Sendviči i Predjela', en: 'Sandwiches & Appetizers' }, type: CategoryType.FOOD, order: 2, imageUrl: "assets/cat_sandwiches.png" },
     { id: 'cat_palacinke_slane', name: { sr: 'Slane Palačinke & Panuozzo', en: 'Savory Crepes & Panuozzo' }, type: CategoryType.FOOD, order: 3, imageUrl: "assets/cat_savory_crepes.png" },
     { id: 'cat_burrito', name: { sr: 'Burrito', en: 'Burrito' }, type: CategoryType.FOOD, order: 4, imageUrl: "assets/cat_burrito.png" },
-    { id: 'cat_piletina', name: { sr: 'Pileći Specijaliteti', en: 'Chicken Specialties' }, type: CategoryType.FOOD, order: 5, imageUrl: "assets/cat_chicken.png" },
     { id: 'cat_pizza', name: { sr: 'Pizza na drva', en: 'Wood-fired Pizza' }, type: CategoryType.FOOD, order: 6, imageUrl: "assets/cat_pizza.png" },
     { id: 'cat_salate', name: { sr: 'Salate', en: 'Salads' }, type: CategoryType.FOOD, order: 8, imageUrl: "assets/cat_salads.png" },
     { id: 'cat_paste', name: { sr: 'Paste', en: 'Pasta' }, type: CategoryType.FOOD, order: 9, imageUrl: "assets/cat_pasta.png" },

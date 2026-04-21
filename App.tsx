@@ -1,5 +1,5 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useCallback } from 'react';
 import { INITIAL_DATA } from './constants';
 import { MenuState, MenuItem } from './types';
 import Layout from './components/Layout';
@@ -47,10 +47,19 @@ const App: React.FC = () => {
     return filteredItems.filter(item => item.categoryId === activeCategoryId);
   }, [filteredItems, activeCategoryId, searchQuery]);
 
-  const handleCategoryChange = (catId: string) => {
+  const categoryBarRef = useRef<HTMLDivElement>(null);
+
+  const handleCategoryChange = useCallback((catId: string, buttonEl?: HTMLButtonElement | null) => {
     setActiveCategoryId(catId);
     if (searchQuery) setSearchQuery("");
-  };
+    if (buttonEl && categoryBarRef.current) {
+      const bar = categoryBarRef.current;
+      const btnLeft = buttonEl.offsetLeft;
+      const btnWidth = buttonEl.offsetWidth;
+      const barWidth = bar.offsetWidth;
+      bar.scrollTo({ left: btnLeft - barWidth / 2 + btnWidth / 2, behavior: 'smooth' });
+    }
+  }, [searchQuery]);
 
   const handleMenuTypeToggle = (type: 'FOOD' | 'DRINK') => {
     if (menuType === type) return;
@@ -136,12 +145,12 @@ const App: React.FC = () => {
 
       {/* Categories Horizontal Scroll */}
       <div className="sticky top-[81px] md:top-[93px] z-40 bg-[#2d1b36]/80 backdrop-blur-xl border-b border-white/5 overflow-hidden">
-        <div className="max-w-7xl mx-auto overflow-x-auto no-scrollbar scroll-smooth">
+        <div ref={categoryBarRef} className="max-w-7xl mx-auto overflow-x-auto no-scrollbar scroll-smooth">
           <div className="flex gap-2 md:gap-4 px-6 py-4 min-w-max md:justify-center">
             {visibleCategories.map(cat => (
               <button
                 key={cat.id}
-                onClick={() => handleCategoryChange(cat.id)}
+                onClick={(e) => handleCategoryChange(cat.id, e.currentTarget)}
                 className={`flex-shrink-0 whitespace-nowrap px-6 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest transition-all duration-300 border ${activeCategoryId === cat.id && !searchQuery
                   ? 'bg-amber-500 text-black border-amber-500 shadow-lg shadow-amber-500/20'
                   : 'bg-white/5 text-slate-400 border-white/5 hover:bg-white/10 hover:text-slate-200'
